@@ -35,7 +35,7 @@
       "source": "google/skills",
       "sourceType": "github",
       "skillPath": "skills/cloud/agent-platform-migrate-from-ai-studio/SKILL.md",
-      "computedHash": "e445c04c040e5d0276482c2f1ed6d47e6e895f87e86f47175a7311efcd953862"
+      "computedHash": "8b8e8008e53c5efa4ec0c22702f99350c99f0a54defa8c8476c2e7491340a702"
     },
     "agent-platform-model-registry": {
       "source": "google/skills",
@@ -1955,7 +1955,7 @@
       "source": "google/skills",
       "sourceType": "github",
       "skillPath": "skills/cloud/gemini-agents-api/SKILL.md",
-      "computedHash": "1cc8a7861a58b26a5453fcaa91e4e32a11135d68209e3d20dde0e575f32f4336"
+      "computedHash": "5fdf7277a92102db3230593781a8dcef15cc5f6c11b9859ac5c011881f57b456"
     },
     "gemini-api": {
       "source": "google/skills",
@@ -1967,7 +1967,7 @@
       "source": "google/skills",
       "sourceType": "github",
       "skillPath": "skills/cloud/gemini-interactions-api/SKILL.md",
-      "computedHash": "6bd649a88b6197a9fe2893faa8ebd9195abcffd2981624723aec7596388c0b1e"
+      "computedHash": "a8f9a01ab1ad58fe9999a1f943e4866eb78fdd1c408ac560b5968220068d8bcc"
     },
     "generating-threat-intelligence-reports": {
       "source": "mukul975/Anthropic-Cybersecurity-Skills",
@@ -1985,7 +1985,7 @@
       "source": "google/skills",
       "sourceType": "github",
       "skillPath": "skills/cloud/google-cloud-networking-observability/SKILL.md",
-      "computedHash": "14c2509b0d6d34de1bb3da7e0280da2aea683e4a25dd361810f27bf1e6d6cc6a"
+      "computedHash": "0391906ba3420f6c52911d888c1c821bba6858190de89497565e6c09ca613b76"
     },
     "google-cloud-recipe-auth": {
       "source": "google/skills",
@@ -3269,7 +3269,7 @@
       "source": "shadcn/improve",
       "sourceType": "github",
       "skillPath": "skills/improve/SKILL.md",
-      "computedHash": "431adaf38132005b32cacb952313f18b4c03ee98ee4c5859bad323156a48bb02"
+      "computedHash": "39a9358732dcff385e9e4d3e60b4547856f834e54a58b35e455aa9bd49928c13"
     },
     "integrating-dast-with-owasp-zap-in-pipeline": {
       "source": "mukul975/Anthropic-Cybersecurity-Skills",
@@ -3329,7 +3329,7 @@
       "source": "GoogleChrome/modern-web-guidance",
       "sourceType": "github",
       "skillPath": "skills/modern-web-guidance/SKILL.md",
-      "computedHash": "5ba7a1367448fb7892112f0b629e9e23d1ba73eda5193aa0cadade6e8d2a83ba"
+      "computedHash": "9f4a50b16567d3e146014ca1e36cf31d11a9b28468eebdbbbee06ffe3b08dda8"
     },
     "monitoring-darkweb-sources": {
       "source": "mukul975/Anthropic-Cybersecurity-Skills",
