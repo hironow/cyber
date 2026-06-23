@@ -4555,6 +4555,12 @@
       "skillPath": "skills/securing-serverless-functions/SKILL.md",
       "computedHash": "4bbcb50518030c7b103199dcad5536d0af73400d4007c56169ba3c6bb529f4c7"
     },
+    "security-audit": {
+      "source": "cloudflare/security-audit-skill",
+      "sourceType": "github",
+      "skillPath": "SKILL.md",
+      "computedHash": "112f44eb3c7990a87b3218a5d70e24619131dee42699066a71fca935b18745d1"
+    },
     "shadcn": {
       "source": "shadcn/ui",
       "sourceType": "github",
