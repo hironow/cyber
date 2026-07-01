@@ -1,11 +1,15 @@
 ---
 name: gke-basics
-description: "Plan, create, and configure production-ready Google Kubernetes Engine (GKE) clusters using the golden path Autopilot configuration. Covers Day-0 checklist, Autopilot vs Standard, networking (private clusters, VPC-native, Gateway API), security (Workload Identity, Secret Manager, RBAC hardening), observability, scaling, cost optimization, and AI/ML inference. WHEN: create GKE cluster, provision GKE environment, design GKE networking, secure GKE, optimize GKE cost, GKE autoscaling, GKE inference, GKE upgrade, GKE observability, GKE multi-tenancy, GKE batch, GKE HPC, GKE compute class."
+metadata:
+  category: Containers
+description: >-
+  Core GKE cluster discovery and hub. Use to route to specialized GKE skills.
+  Do not use for specialized tasks (networking, security, etc.) directly.
 ---
 
-# Google Kubernetes Engine (GKE) Basics
+# GKE Basics
 
-GKE is a managed Kubernetes platform on Google Cloud for deploying, scaling, and operating containerized applications. This skill defaults to the **golden path Autopilot configuration** — see [gke-golden-path.md](./references/gke-golden-path.md) for defaults, rules, and guardrails.
+Managed Kubernetes platform on Google Cloud. Defaults to Autopilot mode.
 
 ## Quick Start
 
@@ -13,37 +17,55 @@ GKE is a managed Kubernetes platform on Google Cloud for deploying, scaling, and
 gcloud services enable container.googleapis.com --quiet
 gcloud container clusters create-auto my-cluster --region=us-central1 --quiet
 gcloud container clusters get-credentials my-cluster --region=us-central1 --quiet
-kubectl create deployment hello-server \
-  --image=us-docker.pkg.dev/google-samples/containers/gke/hello-app:1.0
 ```
 
-## Reference Directory
+## GKE Skill Routing Table
 
-Load the relevant reference based on trigger keywords. Prefer the most specific match; if ambiguous, ask the user to clarify.
+Load the single, most specific GKE sub-skill below matching your workload
+requirements. **Do not load multiple GKE skills unless explicitly required.**
 
-| Scenario | Trigger Keywords | Reference |
-|----------|-----------------|-----------|
-| Core Concepts | Autopilot vs Standard, architecture, pricing, what is GKE | [core-concepts.md](./references/core-concepts.md) |
-| Golden Path & Defaults | golden path, Day-0 checklist, production defaults, cluster defaults | [gke-golden-path.md](./references/gke-golden-path.md) |
-| Cluster Creation | create cluster, new cluster, provision GKE | [gke-cluster-creation.md](./references/gke-cluster-creation.md) |
-| Networking | private cluster, VPC, subnet, Gateway API, DNS, ingress, egress, datapath | [gke-networking.md](./references/gke-networking.md) |
-| Security & IAM | Workload Identity, Secret Manager, RBAC, Binary Auth, hardening, audit, gVisor, IAM roles | [gke-security.md](./references/gke-security.md) |
-| Scaling | HPA, VPA, autoscaler, autoscaling, NAP, scale pods, scale nodes | [gke-scaling.md](./references/gke-scaling.md) |
-| Compute Classes | ComputeClass, machine family, Spot fallback, GPU node pool, node selection | [gke-compute-classes.md](./references/gke-compute-classes.md) |
-| Cost | cost, savings, Spot VMs, rightsizing, CUD, optimize spend, budget | [gke-cost.md](./references/gke-cost.md) |
-| AI/ML Inference | inference, model serving, LLM, GPU, TPU, GIQ, vLLM | [gke-inference.md](./references/gke-inference.md) |
-| Upgrades | upgrade, maintenance window, release channel, patching, version | [gke-upgrades.md](./references/gke-upgrades.md) |
-| Observability | monitoring, logging, Prometheus, Grafana, metrics, alerts, dashboards | [gke-observability.md](./references/gke-observability.md) |
-| Multi-tenancy | multi-tenant, namespace isolation, team access, enterprise, RBAC planning | [gke-multitenancy.md](./references/gke-multitenancy.md) |
-| Batch & HPC | batch, HPC, job queue, high performance, MPI, parallel | [gke-batch-hpc.md](./references/gke-batch-hpc.md) |
-| App Onboarding | containerize, deploy app, Dockerfile, onboard, migrate to GKE | [gke-app-onboarding.md](./references/gke-app-onboarding.md) |
-| Backup & DR | backup, restore, disaster recovery, CMEK | [gke-backup-dr.md](./references/gke-backup-dr.md) |
-| Storage | storage, PVC, persistent volume, StorageClass, Filestore, GCS FUSE | [gke-storage.md](./references/gke-storage.md) |
-| Reliability | PDB, health probe, liveness, readiness, topology spread, graceful shutdown | [gke-reliability.md](./references/gke-reliability.md) |
-| Client Libraries | client library, client-go, kubernetes python, kubernetes java, kubernetes SDK | [client-library-usage.md](./references/client-library-usage.md) |
-| Infrastructure as Code | Terraform, IaC, HCL, infrastructure as code | [iac-usage.md](./references/iac-usage.md) |
-| MCP Server | MCP tools, MCP server, MCP setup | [mcp-usage.md](./references/mcp-usage.md) |
-| CLI / Tools | gcloud, kubectl, commands, how to | [cli-reference.md](./references/cli-reference.md) |
-| Production Audit | production readiness, compliance, golden path check | [gke-cluster-creation.md](./references/gke-cluster-creation.md) |
+| Scenario             | Trigger Keywords             | Target Skill           |
+| -------------------- | ---------------------------- | ---------------------- |
+| Golden Path Defaults | production defaults, golden  | `gke-golden-path`      |
+:                      : path                         :                        :
+| Cluster Creation     | create cluster, provision    | `gke-cluster-creation` |
+:                      : GKE                          :                        :
+| Networking & Ingress | private cluster, VPC,        | `gke-networking`       |
+:                      : Gateway API, Ingress, DNS    :                        :
+| Security & IAM       | Workload Identity, Secret    | `gke-security`         |
+:                      : Manager, RBAC, hardening     :                        :
+| Autoscaling          | HPA, VPA, Cluster            | `gke-scaling`          |
+:                      : Autoscaler, NAP              :                        :
+| Compute Classes      | ComputeClass, Spot fallback, | `gke-compute-classes`  |
+:                      : GPU/TPU nodes                :                        :
+| Cost Optimization    | Spot VMs, rightsizing, cost  | `gke-cost`             |
+:                      : allocation                   :                        :
+| AI/ML Workloads      | LLM, GPU/TPU inference,      | `gke-inference`        |
+:                      : serving, vLLM                :                        :
+| Cluster Upgrades     | upgrade, maintenance window, | `gke-upgrades`         |
+:                      : release channel              :                        :
+| Observability        | monitoring, logging,         | `gke-observability`    |
+:                      : Prometheus, dashboards       :                        :
+| Multi-tenancy        | namespace isolation,         | `gke-multitenancy`     |
+:                      : resource quota, LimitRange   :                        :
+| Batch & HPC          | batch, HPC, Kueue, JobSet,   | `gke-batch-hpc`        |
+:                      : parallel jobs                :                        :
+| App Onboarding       | containerize, Dockerfile,    | `gke-app-onboarding`   |
+:                      : deploy app, onboard          :                        :
+| Backup & DR          | backup plan, restore,        | `gke-backup-dr`        |
+:                      : disaster recovery, CMEK      :                        :
+| Storage & PVC        | SSD, PV, PVC, StorageClass,  | `gke-storage`          |
+:                      : GCS FUSE                     :                        :
+| Reliability          | PDB, health probe, liveness, | `gke-reliability`      |
+:                      : readiness                    :                        :
 
-*If you need product information not found in these references, use the Developer Knowledge MCP server `search_documents` tool.*
+## Conceptual & Informational Queries (CRITICAL)
+
+For purely conceptual, educational, or informational questions (e.g. "What is
+GKE?", "Explain GKE architecture", or "Compare Standard vs Autopilot" in a
+generic sense):
+
+*   **Rule**: **Answer immediately using your pre-trained knowledge.**
+*   **Constraint**: **Do not execute code searches, directory listings, or other
+    tool calls** unless the user explicitly requests you to inspect the local
+    workspace or run a command. Keep it fast, cheap, and direct.

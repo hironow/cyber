@@ -1,5 +1,7 @@
 ---
 name: agent-platform-tuning-management
+metadata:
+  category: AiAndMachineLearning
 description: >-
   Manages GenAI tuning jobs in Agent Platform. Use this to list, get, or cancel
   ongoing model tuning jobs. Don't use for fine-tuning models (use
@@ -36,6 +38,7 @@ following safety tiers based on the action requested:
 the environment is correctly initialized by following these steps:
 
 1.  **Virtual Environment**: Create and activate a virtual environment:
+    
     ```bash
     python3 -m venv ~/tuning_mgr_venv
     source ~/tuning_mgr_venv/bin/activate
@@ -43,11 +46,13 @@ the environment is correctly initialized by following these steps:
 2.  **Google Cloud Authentication**: Authenticate with your Google Cloud account
     and configure active Application Default Credentials (ADC) for Agent
     Platform access:
+    
     ```bash
     gcloud auth login
     gcloud auth application-default login
     ```
 3.  **Install Dependencies**: Install the required Agent Platform SDK:
+    
     ```bash
     pip install google-cloud-aiplatform
     ```

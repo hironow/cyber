@@ -1,5 +1,7 @@
 ---
 name: gemini-interactions-api
+metadata:
+  category: AiAndMachineLearning
 description: Guides the usage of Gemini Interactions API on Gemini Enterprise Agent Platform. Use when the user wants to use the stateful, server-managed Interactions API for multi-turn conversations, background execution, streaming, structured output, and function calling on the Agent Platform.
 ---
 
@@ -24,10 +26,12 @@ The Interactions API is the modern, recommended way to execute Generative AI age
 Before running any code, ensure you are authenticated with Application Default Credentials (ADC) and have the necessary API enabled.
 
 1.  **Login**:
+    
     ```bash
     gcloud auth application-default login
     ```
 2.  **Enable API** (if not already enabled):
+    
     ```bash
     gcloud services enable aiplatform.googleapis.com
     ```
@@ -49,6 +53,7 @@ export GOOGLE_CLOUD_LOCATION="global"
 ```
 
 #### Python
+
 ```python
 from google import genai
 
@@ -57,6 +62,7 @@ client = genai.Client()
 ```
 
 #### TypeScript/JavaScript
+
 ```typescript
 import { GoogleGenAI } from "@google/genai";
 
@@ -69,6 +75,7 @@ const ai = new GoogleGenAI();
 Alternatively, pass configuration values directly inside your code:
 
 #### Python
+
 ```python
 from google import genai
 import google.auth
@@ -78,6 +85,7 @@ client = genai.Client(enterprise=True, project=project_id, location="global")
 ```
 
 #### TypeScript/JavaScript
+
 ```typescript
 import { GoogleGenAI } from "@google/genai";
 
@@ -98,6 +106,7 @@ const ai = new GoogleGenAI({
 Submit a single prompt and read the final text response. Under the modern schema, output content is retrieved from the `steps` list.
 
 #### Python
+
 ```python
 interaction = client.interactions.create(
     model="gemini-3-flash-preview",
@@ -108,6 +117,7 @@ print(interaction.steps[-1].content[0].text)
 ```
 
 #### TypeScript/JavaScript
+
 ```typescript
 const interaction = await ai.interactions.create({
     model: "gemini-3-flash-preview",
@@ -123,6 +133,7 @@ console.log(interaction.steps[interaction.steps.length - 1].content[0].text);
 Interactions are stateful by default. Store the conversation state in the cloud and reference it in the subsequent turn using `previous_interaction_id`.
 
 #### Python
+
 ```python
 # Turn 1: Introduce ourselves
 turn1 = client.interactions.create(
@@ -142,6 +153,7 @@ print(f"Turn 2: {turn2.steps[-1].content[0].text}")
 ```
 
 #### TypeScript/JavaScript
+
 ```typescript
 // Turn 1
 const turn1 = await ai.interactions.create({
@@ -166,6 +178,7 @@ console.log(turn2.steps[turn2.steps.length - 1].content[0].text);
 Stream responses in real-time. Passing `stream=True` returns an iterable chunk generator.
 
 #### Python
+
 ```python
 response = client.interactions.create(
     model="gemini-3-flash-preview",
@@ -182,6 +195,7 @@ print()
 ```
 
 #### TypeScript/JavaScript
+
 ```typescript
 const responseStream = await ai.interactions.create({
     model: "gemini-3-flash-preview",
@@ -207,6 +221,7 @@ console.log();
 Retrieve structured, type-safe JSON matching a schema. Under the modern Interactions API, a polymorphic `response_format` argument directly takes the target schema structure.
 
 #### Python
+
 ```python
 from pydantic import BaseModel, Field
 
@@ -226,6 +241,7 @@ print(interaction.steps[-1].content[0].text)
 ```
 
 #### TypeScript/JavaScript
+
 ```typescript
 import { Type } from "@google/genai";
 
@@ -255,6 +271,7 @@ console.log(interaction.steps[interaction.steps.length - 1].content[0].text);
 Define local tools (functions) and submit execution results to the stateful interaction history.
 
 #### Python
+
 ```python
 def get_stock_price(ticker: str) -> float:
     """Gets the stock price for a given ticker symbol."""
@@ -287,6 +304,7 @@ if last_step.tool_calls:
 ```
 
 #### TypeScript/JavaScript
+
 ```typescript
 import { Type } from "@google/genai";
 
@@ -385,6 +403,7 @@ curl -X POST "https://aiplatform.googleapis.com/v1beta1/projects/${PROJECT_ID}/l
 
 #### Response Example
 A synchronous POST request returns a JSON object containing the conversation step details and unique identifiers:
+
 ```json
 {
   "id": "your-interaction-id",

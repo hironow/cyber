@@ -12,20 +12,20 @@ Install with whichever package manager the project already uses (`npm install`, 
 npm install @arcjet/guard
 ```
 
-Requires `@arcjet/guard` ≥ 1.4.0. The runtime minimums are stricter than the request adapters (which need only Node 20+):
+Requires `@arcjet/guard` ≥ 1.4.0 for basic Guard protection. New release features called out below require **`@arcjet/guard` 1.6.0**. Runtime minimums match the current Arcjet JS SDK line:
 
 | Runtime            | Minimum version          |
 | ------------------ | ------------------------ |
-| Node.js            | 22.18.0                  |
+| Node.js            | `>=22.21.0 <23 || >=24.5.0` |
 | Bun                | 1.3.0                    |
 | Deno               | `stable` / `lts`         |
 | Cloudflare Workers | compat date `2025-09-01` |
 
-The correct transport is picked automatically via conditional exports (HTTP/2 on Node and Bun, fetch-based on Deno and Workers) — import from `@arcjet/guard` either way. If the project is on Node 20/21 or an older Bun/Workers compat date, warn the user and stop until the runtime is bumped.
+The correct transport is picked automatically via conditional exports (HTTP/2 on Node and Bun, fetch-based on Deno and Workers) — import from `@arcjet/guard` either way. If the project is on Node 20/21, Node 23, Node 24 below 24.5.0, or an older Bun/Workers compat date, warn the user and stop until the runtime is bumped.
 
 Read the installed package's types and doc comments for the full API surface.
 
-> _Runtime support last verified against `@arcjet/guard` v1.4.0 on **2026-05-20**. Before relying on these numbers, check the [Runtime support section](https://github.com/arcjet/arcjet-js/tree/main/arcjet-guard#runtime-support) of the current README — minimums tend to creep upward over time._
+> _Runtime support last verified against the `@arcjet/guard` v1.6.0 release on **2026-06-30**. Before relying on these numbers, check the [Runtime support section](https://github.com/arcjet/arcjet-js/tree/main/arcjet-guard#runtime-support) of the current README — minimums tend to creep upward over time._
 
 ## Architecture: Why Things Go Where They Do
 
@@ -144,6 +144,10 @@ Use `detectPromptInjection()` on any untrusted text before it reaches a model or
 
 Use `localDetectSensitiveInfo()` to block PII from entering or leaving the system (e.g. users sending credit card numbers, or tool outputs leaking email addresses). The scan runs locally via WASM — raw text never leaves the SDK, which matters for compliance.
 
+### Content moderation
+
+Available from **`@arcjet/guard` 1.6.0**: `experimental_moderateContent()` flags unsafe or policy-violating text for Guard call sites. It is explicitly experimental — the name and result shape may change, and the server may return an error result while the rule is experimental. Treat those errors as fail-open and inspect `decision.hasFailedOpen()` / `decision.errorResults()`.
+
 ## Decision Handling
 
 `decision.conclusion` is either `"ALLOW"` or `"DENY"`. Always check before proceeding.
@@ -165,7 +169,33 @@ if (decision.conclusion === "DENY") {
 
 `decision.reason` is a flat string when `conclusion === "DENY"` — one of `"RATE_LIMIT"`, `"PROMPT_INJECTION"`, `"SENSITIVE_INFO"`, `"CUSTOM"`, `"ERROR"`, `"NOT_RUN"`, `"UNKNOWN"`. (On ALLOW it's `undefined`.) Read the types on the decision object for the full structure.
 
-`decision.hasError()` means something went wrong during rule evaluation (service unreachable, rule execution failure, etc.) but the SDK failed open. Log it but don't block the user.
+### Errors vs warnings (failing open)
+
+`guard()` never throws for runtime degradation — a transport failure or a rule that couldn't be processed comes back as a fail-open `"ALLOW"` decision, not an exception. Two distinct signals (available from **`@arcjet/guard` 1.6.0**) tell you what happened:
+
+- `decision.hasFailedOpen()` — `true` when the decision is `"ALLOW"` *only* because a rule or the decision itself could not be processed. This is the **fail-closed gate**: if the operation is sensitive enough that a degraded Arcjet signal should block rather than allow, branch on this and deny. `decision.errorResults()` returns the errored results (each with a `code`/`message`) for logging.
+- `decision.warnings` — request-validation diagnostics (e.g. an invalid metadata key that was stripped). The decision is still valid and trustworthy; warnings never change the conclusion. Log them so the config gets fixed, but don't block on them.
+
+To attribute a failure to a *specific* rule rather than scanning the whole decision, each rule also exposes `.errorResult(decision)` (new in **`@arcjet/guard` 1.6.0**) — the mirror of `.deniedResult(decision)`. It returns that rule's `RuleResultError` (with `code`/`message`) if that rule errored, else `null`. Use it when only one rule failing open is actually unsafe (e.g. the prompt-injection scan) while others failing open is tolerable.
+
+```typescript
+const decision = await arcjet.guard({ label: "tools.get-weather", rules });
+if (decision.hasFailedOpen()) {
+  // Arcjet couldn't fully evaluate. Allow by default, or deny for a sensitive op.
+  console.error("guard failed open", decision.errorResults());
+}
+for (const w of decision.warnings) console.warn(`${w.code}: ${w.message}`);
+```
+
+On `@arcjet/guard` ≤ 1.5.0 the only signal is `decision.hasError()`, which is **deprecated** from 1.6.0 (it conflated request diagnostics with rule errors). Check the installed package's types — if `hasFailedOpen` exists, prefer it over `hasError()`.
+
+### Correlation IDs
+
+Available from **`@arcjet/guard` 1.6.0**: pass `correlationId` to `.guard()` to correlate a guard decision with a request, workflow run, or agent trace. It is a dedicated field, not metadata, and it does not affect the decision.
+
+### Outbound HTTP proxy
+
+Available from **`@arcjet/guard` 1.6.0**: standard `HTTP_PROXY`, `HTTPS_PROXY`, and `NO_PROXY` environment variables are auto-detected for outbound Arcjet API calls where the runtime supports proxying. Do not log proxy URLs because they may contain credentials.
 
 ## Key Patterns
 

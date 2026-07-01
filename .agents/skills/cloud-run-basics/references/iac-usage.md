@@ -73,4 +73,4 @@ resource "google_cloud_run_v2_worker_pool" "default" {
 ## YAML
 
 Cloud Run resources can also be defined using YAML. For more information, see
-[Cloud Run YAML reference](https://docs.cloud.google.com/run/docs/reference/yaml/v1).
+[Cloud Run YAML reference](https://docs.cloud.google.com/run/docs/reference/yaml/v1.md.txt).

@@ -132,4 +132,4 @@ spec:
     cpuCount: 2
 ```
 
-For more information, see the [Config Connector resources](https://docs.cloud.google.com/config-connector/docs/reference/overview).
+For more information, see the [Config Connector resources](https://docs.cloud.google.com/config-connector/docs/reference/overview.md.txt).

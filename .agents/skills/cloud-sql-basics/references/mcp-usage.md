@@ -38,9 +38,9 @@ Plugin:
 
 Setup varies by database engine and whether you are connecting to a remote
 server or using the MCP Toolbox. For remote server setup, see Setting up
-Cloud SQL MCP for [PostgreSQL](https://docs.cloud.google.com/sql/docs/postgres/use-cloudsql-mcp),
-[MySQL](https://docs.cloud.google.com/sql/docs/mysql/use-cloudsql-mcp), or
-[SQL Server](https://docs.cloud.google.com/sql/docs/sqlserver/use-cloudsql-mcp).
+Cloud SQL MCP for [PostgreSQL](https://docs.cloud.google.com/sql/docs/postgres/use-cloudsql-mcp.md.txt),
+[MySQL](https://docs.cloud.google.com/sql/docs/mysql/use-cloudsql-mcp.md.txt), or
+[SQL Server](https://docs.cloud.google.com/sql/docs/sqlserver/use-cloudsql-mcp.md.txt).
 
 ## Supported Operations
 

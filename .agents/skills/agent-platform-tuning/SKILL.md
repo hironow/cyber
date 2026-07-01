@@ -1,5 +1,7 @@
 ---
 name: agent-platform-tuning
+metadata:
+  category: AiAndMachineLearning
 description: >-
   Agent Platform Model Tuning. Use when you need to fine-tune open models
   or Gemini models using Agent Platform infrastructure. Don't use for model
@@ -24,8 +26,8 @@ configuration, monitoring, and deployment.
 
     -   **No** → **STOP**. Ask the user if they want to tune an Open Model or a
         Gemini Model. **CRITICAL EXCEPTION for Environment Setup Requests:** If
-        the user is specifically asking for environment setup instructions
-        (e.g. "What environment setup is needed?"), you **MUST** provide the full
+        the user is specifically asking for environment setup instructions (e.g.
+        "What environment setup is needed?"), you **MUST** provide the full
         [Phase 0 environment setup](#phase-0) instructions in your initial
         response, *simultaneously* with asking clarifying questions about the
         model category.
@@ -148,13 +150,13 @@ pip install -r references/requirements.txt
 
 **CRITICAL AGENT INSTRUCTION:** You **MUST** ensure that every Python command or
 script execution (e.g., `python3 scripts/...`, `pip install ...`) is prefixed
-with the virtual environment activation command: `source ~/tuning_agent_venv/bin/activate &&`.
-Additionally, advise the user that every single time they run a Python command,
-execute a script, or inspect data inline, they **MUST** also activate this
-virtual environment first in their bash execution. For example:
-`source ~/tuning_agent_venv/bin/activate && python3 ...`.
-Do not run standalone `python3` commands without activating the environment, as
-they will encounter `ModuleNotFoundError` issues.
+with the virtual environment activation command: `source
+~/tuning_agent_venv/bin/activate &&`. Additionally, advise the user that every
+single time they run a Python command, execute a script, or inspect data inline,
+they **MUST** also activate this virtual environment first in their bash
+execution. For example: `source ~/tuning_agent_venv/bin/activate && python3
+...`. Do not run standalone `python3` commands without activating the
+environment, as they will encounter `ModuleNotFoundError` issues.
 
 ## Phase 1: Dataset Preparation & Upload {#phase-1}
 
@@ -254,6 +256,7 @@ confirmation before submitting the job.**
 
 -   We can calculate a rough estimate of cost of tuning based on the dataset and
     the selected model in the [Models Catalog](references/models.md):
+
     ```bash
     python3 scripts/calculate_cost.py \
         --input my_data.jsonl \
@@ -315,7 +318,7 @@ Check if `scripts/tune_gemini_model.py` exists.
 Submit the open model tuning job using `scripts/tune_open_model.py`. Identify
 the model id using available models documentation at
 <!-- disableFinding(LINE_OVER_80) -->
-[documentation](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/open-model-tuning#supported-models).
+[documentation](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/open-model-tuning.md.txt).
 <!-- enableFinding(LINE_OVER_80) -->
 
 ```bash

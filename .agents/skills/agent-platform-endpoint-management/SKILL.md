@@ -1,5 +1,7 @@
 ---
 name: agent-platform-endpoint-management
+metadata:
+  category: AiAndMachineLearning
 description: >-
   Manages Agent Platform serving endpoints. Use when you need to create, list,
   describe, update, or delete serving endpoints for model deployment on Agent
@@ -48,11 +50,13 @@ correctly initialized by following these steps:
 1.  **Google Cloud Authentication**: Authenticate with your Google Cloud
     credentials and configure active Application Default Credentials (ADC) for
     Agent Platform access:
+    
     ```bash
     gcloud auth login
     gcloud auth application-default login
     ```
 2.  **Set Project**: Configure the active project for subsequent commands:
+    
     ```bash
     gcloud config set project $PROJECT_ID
     ```

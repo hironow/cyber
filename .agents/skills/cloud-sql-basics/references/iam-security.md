@@ -62,6 +62,6 @@ a backup, nor clone, delete, or promote instances. Cannot start or stop
     Cloud Run or GKE) the `roles/cloudsql.client` role.
 
 For more information, see: 
-- [About Access Control - Cloud SQL for MySQL](https://docs.cloud.google.com/sql/docs/mysql/instance-access-control)
-- [About Access Control - Cloud SQL for PostgreSQL](https://docs.cloud.google.com/sql/docs/postgres/instance-access-control)
-- [About Access Control - Cloud SQL for SQL Server](https://docs.cloud.google.com/sql/docs/sqlserver/instance-access-control)
+- [About Access Control - Cloud SQL for MySQL](https://docs.cloud.google.com/sql/docs/mysql/instance-access-control.md.txt)
+- [About Access Control - Cloud SQL for PostgreSQL](https://docs.cloud.google.com/sql/docs/postgres/instance-access-control.md.txt)
+- [About Access Control - Cloud SQL for SQL Server](https://docs.cloud.google.com/sql/docs/sqlserver/instance-access-control.md.txt)

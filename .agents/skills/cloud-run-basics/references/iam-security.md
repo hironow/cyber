@@ -69,7 +69,7 @@ There are two ways to create a public Cloud Run service, you can either:
 * Assign the Cloud Run Invoker IAM role to the `allUsers` member type.
 
 For more information, see:
-[Cloud Run security overview](https://docs.cloud.google.com/run/docs/securing/managing-access#make-service-public).
+[Cloud Run security overview](https://docs.cloud.google.com/run/docs/securing/managing-access.md.txt).
 
 ## Configure IAP to secure access
 

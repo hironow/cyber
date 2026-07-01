@@ -1,5 +1,7 @@
 ---
 name: agent-platform-model-registry
+metadata:
+  category: AiAndMachineLearning
 description: >-
   Agent Platform Model Registry Management. Use when you need to upload, list,
   describe, update, or delete machine learning models (and their versions)
@@ -47,11 +49,13 @@ correctly initialized by following these steps:
 1.  **Google Cloud Authentication**: Authenticate with your Google Cloud
     credentials and configure active Application Default Credentials (ADC) for
     Agent Platform access:
+    
     ```bash
     gcloud auth login
     gcloud auth application-default login
     ```
 2.  **Set Project**: Configure the active project for subsequent commands:
+    
     ```bash
     gcloud config set project $PROJECT_ID
     ```

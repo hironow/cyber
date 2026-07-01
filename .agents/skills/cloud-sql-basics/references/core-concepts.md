@@ -6,7 +6,7 @@ infrastructure while offering standard database engines.
 ## Supported Engines
 
 Cloud SQL supports the following database engines (see [supported
-versions](https://docs.cloud.google.com/sql/docs/db-versions)):
+versions](https://docs.cloud.google.com/sql/docs/db-versions.md.txt)):
 
 -   **MySQL:** Versions 5.6, 5.7, 8.0, and 8.4.
 

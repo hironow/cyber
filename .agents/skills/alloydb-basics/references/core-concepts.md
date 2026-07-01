@@ -8,7 +8,7 @@ allowing for efficient scaling and high availability.
 AlloyDB is ideal for enterprise-grade transactional workloads, such as ERP or
 CRM systems, as well as for analytical workloads that benefit from its columnar
 engine, and vector workloads using its [vector search
-capabilities](https://docs.cloud.google.com/alloydb/docs/ai/perform-vector-search).
+capabilities](https://docs.cloud.google.com/alloydb/docs/ai/perform-vector-search.md.txt).
 
 ## Regional Availability
 

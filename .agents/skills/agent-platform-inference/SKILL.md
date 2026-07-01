@@ -1,5 +1,7 @@
 ---
 name: agent-platform-inference
+metadata:
+  category: AiAndMachineLearning
 description: >-
   Connects to and performs inference with Google Cloud Agent Platform GenAI
   models, including First-Party Gemini models and Third-Party OpenMaaS models
@@ -16,6 +18,34 @@ This skill provides instructions for authenticating and connecting to Google
 Cloud Agent Platform to use Generative AI models. It covers both First-Party
 (Gemini) and Third-Party (OpenMaaS) models.
 
+## Safety & Confirmation Tiers (CRITICAL)
+
+Before executing any commands or scripts on behalf of the user, you must adhere
+to the following safety tiers based on the action requested. (The skill is
+read-only; other safety tiers are omitted):
+
+1.  **Tier R: Read-only / Inference (`client.models.generate_content`, `client.chat.completions.create`, `client.completions.create`, `client.embeddings.create`)**
+    *   Requires **interactive confirmation** with 'Yes'/
+    'No' options before executing model inference on
+    behalf of the user, to prevent unexpected cost or
+    quota consumption. The confirmation prompt must
+    clearly explain the proposed inference execution and
+    its key parameters (e.g., target model ID, SDK
+    choice, input prompt). Natural-language paraphrases
+    without specifying the parameters are NOT sufficient.
+    *   **Same-turn restriction**: Do not execute the
+    inference scripts or commands in the same turn as
+    presenting the confirmation prompt. Stop and wait
+    for the user's reply; only execute after explicit
+    'Yes' / approval.
+    *   **Gold Standard Example**:
+        > I will perform model inference with the following parameters. Please
+        > confirm this information before I proceed:
+        > *   **Model ID**: `deepseek-ai/deepseek-v3.2-maas`
+        > *   **SDK**: OpenAI SDK (via Vertex AI Endpoint)
+        > *   **Input Prompt**: "Explain the concept of quantum computing..."
+        > Do you confirm? [Yes/No]
+
 ## Phase 0: Environment Setup
 
 **CRITICAL**: Before running any of the Python sample scripts in the `scripts/`
@@ -25,26 +55,31 @@ environment is correctly initialized by following these steps:
 1.  **Google Cloud Authentication**: Authenticate with your Google Cloud
     credentials and configure active Application Default Credentials (ADC) for
     Agent Platform access:
+    
     ```bash
     gcloud auth login
     gcloud auth application-default login
     ```
 2.  **Enable API** (if not already enabled):
+    
     ```bash
     gcloud services enable aiplatform.googleapis.com
     ```
 3.  **Virtual Environment**: Create and activate a dedicated local virtual
     environment:
+    
     ```bash
     python3 -m venv .venv
     source .venv/bin/activate
     ```
 4.  **Install Dependencies**: Install the required SDKs:
+    
     ```bash
     pip install -r scripts/requirements.txt
     ```
 5.  **Verify Setup (Optional)**: Run all sample scripts at once to verify the
     environment is working end-to-end:
+    
     ```bash
     ./scripts/verify_all.sh
     ```
@@ -53,6 +88,7 @@ environment is correctly initialized by following these steps:
     activated first.
 
 <!-- disableFinding(LINE_OVER_80) -->
+
 > [!IMPORTANT]
 > **CRITICAL: Model IDs & Availability**
 > *   **Gemini Models**: See [Gemini Models][gemini-models-docs] for valid
@@ -198,6 +234,7 @@ complete code.
 > [!TIP]
 > **Alternative: Environment Variables**
 > You can set environment variables in your shell instead of updating the code.
+>
 > ```bash
 > export OPENAI_BASE_URL="https://aiplatform.googleapis.com/v1/projects/YOUR_PROJECT_ID/locations/global/endpoints/openapi"
 > export OPENAI_API_KEY="$(gcloud auth print-access-token)"

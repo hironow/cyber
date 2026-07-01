@@ -1,5 +1,7 @@
 ---
 name: google-cloud-waf-cost-optimization
+metadata:
+  category: WellArchitectedFramework
 description: Generates cost optimization guidance for Google Cloud workloads based on the Google Cloud Well-Architected Framework (WAF). Use this skill to evaluate a workload, identify cost requirements and constraints, and provide actionable recommendations for build, deploy, and manage the workload cost-efficiently in Google Cloud.
 ---
 
@@ -23,25 +25,25 @@ Framework are aligned with the following core principles:
    business objectives. Prioritize investments that directly contribute to
    revenue, customer satisfaction, or operational efficiency. Grounding
    document:
-   https://docs.cloud.google.com/architecture/framework/cost-optimization/align-cloud-spending-business-value
+   https://docs.cloud.google.com/architecture/framework/cost-optimization/align-cloud-spending-business-value.md.txt
 
 -  **Foster a culture of cost awareness**: Ensure that people across your
    organization consider the cost impact of their decisions and activities.
    Provide teams with the visibility and information they need to make informed,
    cost-conscious choices. Grounding document:
-   https://docs.cloud.google.com/architecture/framework/cost-optimization/foster-culture-cost-awareness
+   https://docs.cloud.google.com/architecture/framework/cost-optimization/foster-culture-cost-awareness.md.txt
 
 -  **Optimize resource usage**: Provision only the resources that you need and
    pay only for what you consume. Select the most cost-effective resource types,
    sizes, and locations that meet your technical and business requirements.
    Grounding document:
-   https://docs.cloud.google.com/architecture/framework/cost-optimization/optimize-resource-usage
+   https://docs.cloud.google.com/architecture/framework/cost-optimization/optimize-resource-usage.md.txt
 
 -  **Optimize continuously**: Continuously monitor your cloud resource usage and
    costs, and proactively make adjustments as needed to optimize your spending.
    This iterative approach helps identify and address inefficiencies before they
    become significant. Grounding document:
-   https://docs.cloud.google.com/architecture/framework/cost-optimization/optimize-continuously
+   https://docs.cloud.google.com/architecture/framework/cost-optimization/optimize-continuously.md.txt
 
 ## Relevant Google Cloud products
 

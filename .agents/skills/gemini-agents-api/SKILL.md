@@ -1,5 +1,7 @@
 ---
 name: gemini-agents-api
+metadata:
+  category: AiAndMachineLearning
 description: Manages custom Agent resources on Gemini Enterprise Agent Platform. Use when the user wants to programmatically create, configure, list, update, or delete stateful, server-managed Agent resources (including mounting files, skills, and tools) before executing conversations.
 ---
 
@@ -32,6 +34,7 @@ export ACCESS_TOKEN=$(gcloud auth print-access-token)
 ### 2. Endpoint URL
 
 The production Agents Control Plane endpoint is:
+
 ```http
 https://aiplatform.googleapis.com/v1beta1/projects/{PROJECT_ID}/locations/{LOCATION}/agents
 ```
@@ -85,6 +88,7 @@ curl -X POST "https://aiplatform.googleapis.com/v1beta1/projects/${PROJECT_ID}/l
 #### LRO Operations Response
 
 Since agent provisioning takes a few moments, the endpoint immediately returns an operation tracking object:
+
 ```json
 {
   "name": "projects/1234567890/locations/global/operations/operation-987654321-abcde",
@@ -101,6 +105,7 @@ Since agent provisioning takes a few moments, the endpoint immediately returns a
 #### [Advanced] Mount Skill Registry Resources
 
 To mount skills directly from the Skill Registry service instead of Cloud Storage, replace the Cloud Storage source item in the payload:
+
 ```json
 "sources": [
   {
@@ -130,6 +135,7 @@ To configure Third-Party MCP servers for an agent, add the server metadata direc
   }
 ]
 ```
+
 *   **name**: A descriptive name for the MCP server.
 *   **url**: The endpoint URL of the external MCP server.
 *   **headers**: (Optional) Custom key-value pairs containing authentication tokens (e.g. API keys, bearer tokens) required to call the server. The platform guarantees that these headers are only sent to the specified MCP server URL.
@@ -165,6 +171,7 @@ curl -X GET "https://aiplatform.googleapis.com/v1beta1/projects/1234567890/locat
 #### Finished Success Response
 
 Once the container is ready, `"done": true` is set, and the completed `Agent` resource description resides inside `"response"`:
+
 ```json
 {
   "name": "projects/1234567890/locations/global/operations/operation-987654321-abcde",
@@ -196,6 +203,7 @@ curl -X GET "https://aiplatform.googleapis.com/v1beta1/projects/${PROJECT_ID}/lo
 
 #### Response Example
 Returns the complete configured state of the custom Agent resource:
+
 ```json
 {
   "name": "projects/your-project-id/locations/global/agents/my-custom-agent",
@@ -243,6 +251,7 @@ curl -X GET "https://aiplatform.googleapis.com/v1beta1/projects/${PROJECT_ID}/lo
 
 #### Response Example
 Returns a JSON list of all configured custom Agents under the target project:
+
 ```json
 {
   "agents": [
@@ -300,6 +309,7 @@ curl -X DELETE "https://aiplatform.googleapis.com/v1beta1/projects/${PROJECT_ID}
 
 #### Response Example
 A successful deletion request returns an empty JSON response body with HTTP Status `200 OK`:
+
 ```json
 {}
 ```
@@ -314,10 +324,12 @@ Once you have programmatically created and provisioned your custom stateful agen
 > **Interactions Reference**: When explaining or showing how to start conversations with a custom agent, you must always explicitly refer the user to the `gemini-interactions-api` skill for complete conversation and streaming options.
 
 To interact with your custom agent:
+
 1.  Obtain your agent's resource path name (e.g., `projects/{PROJECT_ID}/locations/global/agents/{AGENT_ID}`).
 2.  Pass this resource path directly inside your data plane conversation requests under the **`agent`** parameter.
 
 #### Python Example
+
 ```python
 interaction = client.interactions.create(
     agent="projects/your-project-id/locations/global/agents/my-custom-agent",
@@ -326,6 +338,7 @@ interaction = client.interactions.create(
 ```
 
 #### REST / curl Example
+
 ```json
 {
   "agent": "projects/your-project-id/locations/global/agents/my-custom-agent",

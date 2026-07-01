@@ -1,5 +1,7 @@
 ---
 name: agent-platform-deploy
+metadata:
+  category: AiAndMachineLearning
 description: >-
   Deploy open models or custom weights from Model Garden to Agent Platform
   endpoints, check deployment status, verify serving endpoints, or clean up

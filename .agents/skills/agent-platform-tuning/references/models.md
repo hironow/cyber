@@ -12,10 +12,10 @@ Agent Platform.
 > Furthermore, do NOT recommend any model that is not explicitly listed in this
 > catalog, as the tuning service does not support it.
 
-Available open models can be found in Google Cloud [documentation](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/open-model-tuning#supported-models).
+Available open models can be found in Google Cloud [documentation](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/open-model-tuning.md.txt).
 This is the list of open models that are available for tuning; do not suggest
 any other open models besides the one listed here.
-Each model has some [limitations](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/open-model-tuning#limitations) for tuning.
+Each model has some [limitations](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/open-model-tuning.md.txt) for tuning.
 
 ## Model Selection Guidelines
 
