@@ -1,7 +1,7 @@
 ---
 name: gcloud
 metadata:
-  category: DevOps
+  category: CloudInfrastructureAndServices
 description: >-
   Interacts with Google Cloud services using the gcloud CLI safely and
   efficiently. Covers command validation, data reduction, safety guardrails with

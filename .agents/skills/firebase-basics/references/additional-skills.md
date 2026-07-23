@@ -44,7 +44,6 @@ The following skills and reference files are published in the
 -   [`SKILL.md`](https://github.com/firebase/agent-skills/blob/main/skills/firebase-data-connect-basics/SKILL.md)
 -   [`examples.md`](https://github.com/firebase/agent-skills/blob/main/skills/firebase-data-connect-basics/examples.md)
 -   [`templates.md`](https://github.com/firebase/agent-skills/blob/main/skills/firebase-data-connect-basics/templates.md)
--   [`reference/advanced.md`](https://github.com/firebase/agent-skills/blob/main/skills/firebase-data-connect-basics/reference/advanced.md)
 -   [`reference/config.md`](https://github.com/firebase/agent-skills/blob/main/skills/firebase-data-connect-basics/reference/config.md)
 -   [`reference/native_sql.md`](https://github.com/firebase/agent-skills/blob/main/skills/firebase-data-connect-basics/reference/native_sql.md)
 -   [`reference/operations.md`](https://github.com/firebase/agent-skills/blob/main/skills/firebase-data-connect-basics/reference/operations.md)
