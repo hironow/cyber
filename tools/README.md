@@ -2,6 +2,25 @@
 
 Utility tools for this skills collection.
 
+## update-skills.sh
+
+From this repository, run `sh tools/update-skills.sh` to update **project** skills.
+It runs `bunx skills update -p -y`, then reinstalls `gcloud`,
+`google-cloud-recipe-auth`, and `google-cloud-recipe-onboarding` from their
+explicit `google/skills/skills/cloud/` directories. In skills CLI 1.7.1,
+`update` skips these names because upstream also publishes same-named copies
+under `plugins/cloud/google-cloud-developer/skills/`, even though the recorded
+paths still exist. The CLI warning remains, but this wrapper closes the update
+gap without changing global skills or manually editing lock hashes. It stops if
+the lock's source/path changes or an install fails. Review and commit the
+resulting diff after each update.
+
+Offline wrapper checks: `python3 -m unittest discover -s tools -p 'test_update_skills.py'`.
+The lasting fix belongs in the CLI: prefer a still-existing locked path when
+the installer can target that exact path, while preserving fail-closed behavior
+for sources that cannot (tracked upstream in
+[vercel-labs/skills#2231](https://github.com/vercel-labs/skills/pull/2231)).
+
 ## scan_missing_cli.py
 
 Scans every `SKILL.md` and `references/*.md` under `.agents/skills/`, extracts the
