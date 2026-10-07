@@ -1,3 +1,5 @@
+# Design Token Reactivity
+
 ## Background & Overview
 
 Often an author will need to make contextual changes to the design of a component. Historically authors would need to use selectors to apply such changes. This often meant that while many of their design tokens could exist as custom properties, higher-order design tokens could only be encoded as a selector pattern (i.e. using a class name or attribute convention) or as props/context in a JavaScript framework.
@@ -89,7 +91,7 @@ For core features, an alternate approach using selectors should be used. This ex
 }
 ```
 
-A major limitation of this fallback approach is that it does not support nesting elements with the `data-density` attribute set, since the selector specificity is the same, order of appearance will be used to determine the styles (i.e. `[data-density="spacious"]` will always take precendence over `[data-density="compact"]`).
+A major limitation of this fallback approach is that it does not support nesting elements with the `data-density` attribute set, since the selector specificity is the same, order of appearance will be used to determine the styles (i.e. `[data-density="spacious"]` will always take precedence over `[data-density="compact"]`).
 
 ### Using style queries as a progressive enhancement
 

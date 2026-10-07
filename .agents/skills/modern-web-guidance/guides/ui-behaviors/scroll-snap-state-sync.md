@@ -1,3 +1,5 @@
+# Scroll Snap State Sync
+
 Synchronizing UI state with a scrollable container's snap position traditionally required complex scroll event listeners, manual calculations of scroll offsets, and intersection observers. The `scrollsnapchange` event provides a native, efficient way to detect when a scroller has settled on a new snap target, making it useful for synchronizing sidebars or highlighting the active section in a table of contents.
 
 ## Implementation
@@ -58,7 +60,7 @@ In addition, be careful when using the `mandatory` value for `scroll-snap-type`,
 
 ## Fallback strategies
 
-Scroll snap events has limited availability.
+Browser support for Scroll snap events: Limited availability.
 Supported by: Chrome 129 (Sep 2024) and Edge 129 (Sep 2024).
 Unsupported in: Firefox and Safari.
 
@@ -74,7 +76,7 @@ if (!('onscrollsnapchange' in HTMLElement.prototype)) {
       const topEntry = [...headers].reduce((currentTop, header) => {
         // Use the bottom to handle scrolling up, when the top is still offscreen
         const {bottom} = header.getBoundingClientRect();
-        // Don't match if the header's bottom is aboce the scrollport
+        // Don't match if the header's bottom is above the scrollport
         if (bottom < 0) return;
         if (!currentTop) return header;
         return bottom <

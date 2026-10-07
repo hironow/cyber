@@ -6,7 +6,7 @@ The MCP server connects AI coding tools to the Arcjet API over HTTP with OAuth a
 
 ## Setup
 
-### VS Code with Copilot
+### VS Code
 
 Add to `.vscode/mcp.json`:
 
@@ -68,13 +68,15 @@ Settings → Connectors → Add connection → URL: `https://api.arcjet.com/mcp`
 
 ## Authentication
 
-OAuth-based. On first connection, you'll be redirected to sign in with your Arcjet account. Subsequent calls authenticate automatically.
+OAuth-based for a human sign-in. On first connection, you'll be redirected to sign in with your Arcjet account. Subsequent calls authenticate automatically.
 
-## Available Tools
+**Agent registration** (the agent registers for its own identity, not a human browser login): follow https://arcjet.com/auth.md exactly. Do not invent registration, claim, or token-exchange flows, and do not print secrets.
 
-Once connected, the MCP server exposes tools for managing teams, sites, keys, requests, decisions, traffic analysis, anomaly detection, IP investigation, security briefings, and remote rules. The agent can discover available tools through the MCP protocol directly.
+## Available tools
 
-## Common Workflows
+Once connected, the MCP server exposes tools for managing teams, sites, keys, requests, decisions, traffic analysis, anomaly detection, IP investigation, security briefings, remote rules, and Guard policies. The agent can discover available tools through the MCP protocol directly. Guard policy authoring is MCP-only — the CLI has no policy commands.
+
+## Common workflows
 
 **Bootstrap a project:** `list-teams` → `list-sites` → `get-site-key` → write to `.env` as `ARCJET_KEY`
 
@@ -84,7 +86,9 @@ Once connected, the MCP server exposes tools for managing teams, sites, keys, re
 
 **Add protection without redeploying:** `create-rule` (bot/filter in DRY_RUN) → `get-dry-run-impact` → `promote-rule`
 
-## Security Notes
+**Author a Guard policy:** `list-guard-policies` → `describe-guard-policy` → `validate-guard-policy` → `put-guard-policy`. Application policies select by `label` / wrapper `action`. Coding-agent policies attach by **Execute on** (Tool call, Prompt, or Model switch), not by label; publishing turns them on. Install Claude Code / Copilot HTTP hooks from https://docs.arcjet.com/coding-agents — copy the templates. The hook URL must not name a policy and must omit `?surface=` (managed settings reach CLI, IDE, Desktop, and cloud; a hard-coded `cli` mislabels most traffic).
+
+## Security notes
 
 - Verify the endpoint is `https://api.arcjet.com/mcp`
 - Enable confirmation prompts in your AI client for write operations

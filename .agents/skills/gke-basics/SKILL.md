@@ -1,73 +1,67 @@
 ---
 name: gke-basics
 metadata:
+  version: "1.1.1"
   category: Containers
 description: >-
-  Core GKE cluster discovery and hub. Use to route to specialized GKE skills.
-  Do not use for specialized tasks (networking, security, etc.) directly.
+  Manages core GKE cluster provisioning, credentials, Autopilot vs Standard selection,
+  and workload deployment. Use when creating GKE clusters, fetching kubectl credentials,
+  or deciding between Autopilot and Standard modes. Don't use for Workload Identity
+  (use gke-workload-identity), GKE networking (use gke-networking), security hardening
+  (use gke-platform-security or gke-workload-security), or cluster upgrades (use gke-upgrades).
 ---
 
-# GKE Basics
+# GKE Basics & Critical Gotchas
 
-Managed Kubernetes platform on Google Cloud. Defaults to Autopilot mode.
+> **Routing Note:** For Workload Identity KSA/GSA setup, open `gke-workload-identity/SKILL.md`. For cluster security flags (`--database-encryption-key`, `--security-posture`, RBAC, Shielded Nodes, Binary Authorization), open `gke-platform-security/SKILL.md`. For cluster upgrades or maintenance windows, open `gke-upgrades/SKILL.md`. For generating Kubernetes YAML manifests (`Deployment`, `StatefulSet`, `Service`, `HTTPRoute`, `PodDisruptionBudget`), open `gke-manifest-generation/SKILL.md`.
 
-## Quick Start
+Managed Kubernetes platform on Google Cloud. Defaults to Autopilot mode unless Standard is explicitly required.
 
-```bash
-gcloud services enable container.googleapis.com --quiet
-gcloud container clusters create-auto my-cluster --region=us-central1 --quiet
-gcloud container clusters get-credentials my-cluster --region=us-central1 --quiet
-```
+## Key Selection Rules: Autopilot vs. Standard
 
-## GKE Skill Routing Table
+* **Default to Autopilot** for almost all workloads.
+* **Use Standard ONLY if:**
+  * Custom node OS kernel parameters (`sysctl`) are required.
+  * Custom node taints or specific hardware node pools are required.
+  * DaemonSets require raw `hostPath` mounts to the host OS filesystem.
+* When explaining why Standard is required over Autopilot, explicitly cite all matching restrictions (e.g., custom sysctls and custom node taints).
+* *For advanced cluster architecture or complex node pool creation planning, refer to `gke-cluster-creation`.*
 
-Load the single, most specific GKE sub-skill below matching your workload
-requirements. **Do not load multiple GKE skills unless explicitly required.**
+## Critical Gotchas & Best Practices
 
-| Scenario             | Trigger Keywords           | Target Skill             |
-| -------------------- | -------------------------- | ------------------------ |
-| Golden Path Defaults | production defaults,       | `gke-golden-path`        |
-:                      : golden path                :                          :
-| Cluster Creation     | create cluster, provision  | `gke-cluster-creation`   |
-:                      : GKE                        :                          :
-| Networking & Ingress | private cluster, VPC,      | `gke-networking`,        |
-:                      : Gateway API, Ingress, DNS  : `gke-service-networking` :
-| Security & IAM       | Workload Identity, Secret  | `gke-platform-security`, |
-:                      : Manager, RBAC, hardening   : `gke-workload-security`  :
-| Autoscaling          | HPA, VPA, Cluster          | `gke-workload-scaling`   |
-:                      : Autoscaler, NAP            :                          :
-| Compute Classes      | ComputeClass, Spot         | `gke-compute-classes`    |
-:                      : fallback, GPU/TPU nodes    :                          :
-| Cost Analysis        | BigQuery billing exports,  | `gke-cost-analysis`      |
-:                      : budgets, live monitoring   :                          :
-| Cost Optimization    | Spot VMs, rightsizing,     | `gke-cost-optimization`  |
-:                      : quotas                     :                          :
-| AI/ML Workloads      | LLM, GPU/TPU inference,    | `gke-inference`          |
-:                      : serving, vLLM              :                          :
-| Cluster Upgrades     | upgrade, maintenance       | `gke-upgrades`           |
-:                      : window, release channel    :                          :
-| Observability        | monitoring, logging,       | `gke-observability`      |
-:                      : Prometheus, dashboards     :                          :
-| Multi-tenancy        | namespace isolation,       | `gke-multitenancy`       |
-:                      : resource quota, LimitRange :                          :
-| Batch & HPC          | batch, HPC, Kueue, JobSet, | `gke-batch-hpc`          |
-:                      : parallel jobs              :                          :
-| App Onboarding       | containerize, Dockerfile,  | `gke-app-onboarding`     |
-:                      : deploy app, onboard        :                          :
-| Backup & DR          | backup plan, restore,      | `gke-backup-dr`          |
-:                      : disaster recovery, CMEK    :                          :
-| Storage & PVC        | SSD, PV, PVC,              | `gke-storage`            |
-:                      : StorageClass, GCS FUSE     :                          :
-| Reliability          | PDB, health probe,         | `gke-reliability`        |
-:                      : liveness, readiness        :                          :
+1. **Private Autopilot Clusters:**
+   * Use `--enable-private-nodes` for private node IP addresses.
+   * Use `--enable-private-endpoint` to disable public IP access to the control plane.
+   * Restrict control plane access with `--enable-master-authorized-networks` and `--master-authorized-networks=CIDR_BLOCK`:
+     ```bash
+     gcloud container clusters create-auto CLUSTER_NAME --region=REGION \
+       --enable-private-nodes \
+       --enable-private-endpoint \
+       --enable-master-authorized-networks \
+       --master-authorized-networks=CIDR_BLOCK
+     ```
 
-## Conceptual & Informational Queries (CRITICAL)
+2. **Workload Identity (IAM Binding):**
+   * Never mount raw GCP Service Account JSON keys in Pods; open `gke-workload-identity/SKILL.md` for KSA/GSA setup.
 
-For purely conceptual, educational, or informational questions (e.g. "What is
-GKE?", "Explain GKE architecture", or "Compare Standard vs Autopilot" in a
-generic sense):
+3. **Autopilot Resource Requests:**
+   * In Autopilot, CPU requests must be specified in increments of 250m (0.25 vCPU). If an unaligned CPU request (e.g., 300m) is requested, round up to the nearest 250m increment (500m / 0.5 vCPU).
+   * Resource requests equal limits automatically. Omit `limits` to allow Autopilot to set defaults matching `requests`.
 
-*   **Rule**: **Answer immediately using your pre-trained knowledge.**
-*   **Constraint**: **Do not execute code searches, directory listings, or other
-    tool calls** unless the user explicitly requests you to inspect the local
-    workspace or run a command. Keep it fast, cheap, and direct.
+4. **Cluster Credentials:**
+   * Always explicitly specify `--region` (for regional clusters) or `--zone` (for zonal clusters) when fetching credentials:
+     ```bash
+     gcloud container clusters get-credentials CLUSTER_NAME --region=REGION --quiet
+     ```
+
+## Reference Directory
+
+-   [Core Concepts](references/core-concepts.md): Architecture, cluster modes (Autopilot vs Standard), networking, scaling, and security model.
+
+-   [CLI Usage & Tool Reference](references/cli-reference.md): Tool preference hierarchy (MCP vs gcloud vs kubectl), `gcloud container` commands, and user preference overrides.
+
+-   [Client Libraries](references/client-library-usage.md): Official Kubernetes and Google Cloud Container client libraries in Python, Go, Node.js, and Java.
+
+-   [MCP Usage](references/mcp-usage.md): Connecting to and using the 23 structured GKE MCP tools for cluster management, K8s resources, and diagnostics.
+
+-   [Infrastructure as Code](references/iac-usage.md): Terraform examples for `google_container_cluster` (Autopilot), Kubernetes provider resources, and YAML samples.

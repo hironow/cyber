@@ -1,3 +1,5 @@
+# Child State Based Styling
+
 Historically, CSS selectors could only traverse downwards—you could style a child based on its parent, but not a parent based on its child. The `:has()` pseudo-class changes this, allowing you to conditionally style a container element depending on the presence or state of its descendants.
 
 By combining `:has()` with state pseudo-classes (like `:checked`, `:focus`, `:valid`, `:invalid`, or `:not()`), you can build complex, interactive UI components entirely in CSS, without needing JavaScript to toggle "modifier" classes (like `.is-active` or `.has-error`) on parent elements.
@@ -64,7 +66,7 @@ To build a component that changes its styling based on a child's state:
 
 ### Fallback strategies
 
-Baseline status for :has(): Newly available. It's been Baseline since 2023-12-19.
+Baseline status for :has(): Widely available. It's been Baseline since 2023-12-19.
 Supported by: Chrome 105 (Sep 2022), Edge 105 (Sep 2022), Firefox 121 (Dec 2023), and Safari 15.4 (Mar 2022).
 
 If the state-based styling is critical to the user experience or page layout, you must provide a fallback for browsers that do not support the `:has()` selector. For purely decorative effects, `:has()` can be used as a progressive enhancement without a fallback.

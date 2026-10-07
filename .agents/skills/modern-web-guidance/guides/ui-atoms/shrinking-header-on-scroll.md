@@ -1,4 +1,4 @@
-# Shrinking headder on scroll
+# Shrinking header on scroll
 
 A shrinking header on scroll is a common UI pattern where a fixed header element at the top of the page smoothly transitions to a smaller size as the user scrolls down. This effect is often used to maximize screen real estate for the main content while keeping essential navigation or branding elements accessible. With CSS scroll-driven animations, this effect can be achieved in a declarative and performant way, by linking an animation to the scroll position of the document.
 
@@ -94,7 +94,7 @@ As for this use case specifically:
 
 ## Browser support and fallback strategies
 
-Scroll-driven animations has limited availability.
+Browser support for Scroll-driven animations: Limited availability.
 Supported by: Chrome 115 (Jul 2023), Edge 115 (Jul 2023), and Safari 26 (Sep 2025).
 Unsupported in: Firefox.. Therefore, a fallback strategy is typically required.
 

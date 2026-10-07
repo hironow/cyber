@@ -78,7 +78,7 @@ chat.send_message("Make the bowl blue")
 
 ## Video Generation with Gemini Omni
 
-`gemini-omni-flash-preview` (Preview) generates and edits video (with synchronized audio) at 720p from text, images, and reference media. Unlike Veo, Omni uses the **Interactions API** (`client.interactions.create`), not `generate_content`/`generate_videos`.
+`gemini-omni-1.1-flash-preview` (Preview) generates and edits video (with synchronized audio) at 720p from text, images, and reference media. Unlike Veo, Omni uses the **Interactions API** (`client.interactions.create`), not `generate_content`/`generate_videos`.
 
 Key configuration:
 
@@ -97,7 +97,7 @@ from google.genai import interactions
 
 client = genai.Client()
 
-omni_model = "gemini-omni-flash-preview"
+omni_model = "gemini-omni-1.1-flash-preview"
 
 
 def save_video(interaction, path="output.mp4"):

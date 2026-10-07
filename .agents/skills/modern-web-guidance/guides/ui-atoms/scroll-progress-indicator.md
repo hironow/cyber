@@ -41,7 +41,7 @@ This code grows the `#progress` element on scroll using an anonymous scroll-time
 }
 ```
 
-Because of its location in the DOM, the `scroll()` function will track its neareast ancestor scroller in the `block` direction, which here is the root scroller.
+Because of its location in the DOM, the `scroll()` function will track its nearest ancestor scroller in the `block` direction, which here is the root scroller.
 
 ```html
 <body>
@@ -104,7 +104,7 @@ When using the `scroll-timeline` property to create a scroll-driven animation:
 
 ## Fallback strategies
 
-Scroll-driven animations has limited availability.
+Browser support for Scroll-driven animations: Limited availability.
 Supported by: Chrome 115 (Jul 2023), Edge 115 (Jul 2023), and Safari 26 (Sep 2025).
 Unsupported in: Firefox.
 

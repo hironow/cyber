@@ -1,6 +1,6 @@
 # Improve Text Layout and Legibility
 
-The layout of text, particularly at the ends of lines and and ends of paragraphs, can impact the legibility and aesthetic appeal of a page. CSS provides several text wrapping options that can improve specific use cases.
+The layout of text, particularly at the ends of lines and ends of paragraphs, can impact the legibility and aesthetic appeal of a page. CSS provides several text wrapping options that can improve specific use cases.
 
 For short text blocks like headings, use `text-wrap: balance`. This property instructs the browser to distribute text as evenly as possible across lines, creating a more symmetrical appearance.
 
@@ -67,7 +67,8 @@ p, blockquote, li, .pretty-text {
 
 Baseline status for text-wrap: balance: Newly available. It's been Baseline since 2024-05-13.
 Supported by: Chrome 114 (May 2023), Edge 114 (Jun 2023), Firefox 121 (Dec 2023), and Safari 17.5 (May 2024).
-text-wrap: pretty has limited availability.
+
+Browser support for text-wrap: pretty: Limited availability.
 Supported by: Chrome 117 (Sep 2023), Edge 117 (Sep 2023), and Safari 26 (Sep 2025).
 Unsupported in: Firefox.
 
