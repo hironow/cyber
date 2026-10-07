@@ -1949,7 +1949,7 @@
       "source": "google/skills",
       "sourceType": "github",
       "skillPath": "skills/cloud/gcloud/SKILL.md",
-      "computedHash": "10315dfb60ef7470de817a92b9095a9c2612684182c163988db7d5e5d75c7fcd"
+      "computedHash": "8c6ef3bac2e79d70a48010c9637eef9b7a0c871361a2ded9b2bdc97c9047a83f"
     },
     "gemini-agents-api": {
       "source": "google/skills",
@@ -1991,13 +1991,13 @@
       "source": "google/skills",
       "sourceType": "github",
       "skillPath": "skills/cloud/google-cloud-recipe-auth/SKILL.md",
-      "computedHash": "a188e06aacfbc4f6e7935cc0642e7b831774ce3aba0a17fda8b220d458f2f9ca"
+      "computedHash": "f17b44e497bef6451b7b63c886bf96b0da38289b46f680ea2adb4c250d4a4245"
     },
     "google-cloud-recipe-onboarding": {
       "source": "google/skills",
       "sourceType": "github",
       "skillPath": "skills/cloud/google-cloud-recipe-onboarding/SKILL.md",
-      "computedHash": "d590a64a207d7d0e231788cf5f5e383e934ba08cff2864fbfd3f99b844303b42"
+      "computedHash": "4a0851235f0078c2296afacf986052c67dad2f44c01b1671838dd75618434f1d"
     },
     "google-cloud-waf-cost-optimization": {
       "source": "google/skills",
