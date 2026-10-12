@@ -1,0 +1,5748 @@
+{
+  "categories": {
+    "notATool": [
+      "noise"
+    ],
+    "notProvisioned": [
+      "pylib"
+    ],
+    "optIn": [
+      "devsec"
+    ],
+    "unsupported": [
+      "linux",
+      "windows"
+    ],
+    "userSelected": [
+      "net",
+      "mobile_re",
+      "dfir",
+      "stego",
+      "cloud_ab",
+      "web3"
+    ]
+  },
+  "entries": {
+    "afl++": {
+      "alternative": null,
+      "category": "mobile_re",
+      "check": [
+        "afl-fuzz"
+      ],
+      "defaultApply": true,
+      "evidence": "declared",
+      "license": "Apache-2.0",
+      "links": [],
+      "method": "brew",
+      "note": "formula 名は afl++",
+      "package": "afl++",
+      "packageVerified": true,
+      "provides": [
+        "afl-cc",
+        "afl-fuzz"
+      ],
+      "python": null,
+      "skills": [
+        "performing-fuzzing-with-aflplusplus"
+      ],
+      "status": "auto",
+      "version": "5.03c",
+      "via": null
+    },
+    "aflplusplus": {
+      "alternative": null,
+      "category": "mobile_re",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "afl++ の別名",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "implementing-fuzz-testing-in-cicd-with-aflplusplus"
+      ],
+      "status": "alias",
+      "version": null,
+      "via": "afl++"
+    },
+    "aide": {
+      "alternative": null,
+      "category": "dfir",
+      "check": [
+        "aide"
+      ],
+      "defaultApply": true,
+      "evidence": "declared",
+      "license": "GPL-2.0-or-later",
+      "links": [],
+      "method": "brew",
+      "note": "FIM（macOS でも動作）",
+      "package": "aide",
+      "packageVerified": true,
+      "provides": [
+        "aide"
+      ],
+      "python": null,
+      "skills": [
+        "implementing-file-integrity-monitoring-with-aide"
+      ],
+      "status": "auto",
+      "version": "0.19.4",
+      "via": null
+    },
+    "aircrack-ng": {
+      "alternative": null,
+      "category": "net",
+      "check": [
+        "aircrack-ng",
+        "airodump-ng"
+      ],
+      "defaultApply": true,
+      "evidence": "invoked",
+      "license": "BSD-3-Clause AND GPL-2.0-or-later AND (GPL-2.0-or-later WITH cryptsetup-OpenSSL-exception)",
+      "links": [],
+      "method": "brew",
+      "note": null,
+      "package": "aircrack-ng",
+      "packageVerified": true,
+      "provides": [
+        "aircrack-ng",
+        "airodump-ng"
+      ],
+      "python": null,
+      "skills": [
+        "performing-wifi-password-cracking-with-aircrack",
+        "performing-wireless-network-penetration-test"
+      ],
+      "status": "auto",
+      "version": "1.7",
+      "via": null
+    },
+    "aleapp": {
+      "alternative": null,
+      "category": "dfir",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": "none",
+      "note": "PyPI 未登録。GitHub リリース（ALEEAPP）を使用",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "performing-mobile-device-forensics-with-cellebrite"
+      ],
+      "status": "manual",
+      "version": null,
+      "via": null
+    },
+    "analyzeheadless": {
+      "alternative": null,
+      "category": "mobile_re",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "invoked",
+      "license": null,
+      "links": [],
+      "method": "none",
+      "note": "Ghidra 同梱（約500MB・GUI 前提）",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "analyzing-golang-malware-with-ghidra",
+        "performing-plc-firmware-security-analysis"
+      ],
+      "status": "manual",
+      "version": null,
+      "via": null
+    },
+    "analyzemft": {
+      "alternative": null,
+      "category": "dfir",
+      "check": [
+        "analyzemft"
+      ],
+      "defaultApply": true,
+      "evidence": "declared",
+      "license": "LICENSE.txt",
+      "links": [
+        {
+          "fromGlob": "$HOME/.local/bin/analyzemft",
+          "name": "analyzeMFT.py",
+          "reason": "pipx は analyzemft 名のみを公開するため（スキルは analyzeMFT.py を呼ぶ）"
+        }
+      ],
+      "method": "pipx",
+      "note": "formula/パッケージ名 analyzeMFT",
+      "package": "analyzeMFT",
+      "packageVerified": true,
+      "provides": [
+        "analyzeMFT.py"
+      ],
+      "python": null,
+      "skills": [
+        "analyzing-slack-space-and-file-system-artifacts",
+        "hunting-for-defense-evasion-via-timestomping"
+      ],
+      "status": "auto",
+      "version": "3.1.1",
+      "via": null
+    },
+    "analyzemft.py": {
+      "alternative": null,
+      "category": "dfir",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "invoked",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "analyzeMFT が提供",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "analyzing-mft-for-deleted-file-recovery",
+        "analyzing-slack-space-and-file-system-artifacts",
+        "hunting-for-defense-evasion-via-timestomping"
+      ],
+      "status": "alias",
+      "version": null,
+      "via": "analyzemft"
+    },
+    "apktool": {
+      "alternative": null,
+      "category": "mobile_re",
+      "check": [
+        "apktool"
+      ],
+      "defaultApply": true,
+      "evidence": "invoked",
+      "license": "Apache-2.0",
+      "links": [],
+      "method": "brew",
+      "note": null,
+      "package": "apktool",
+      "packageVerified": true,
+      "provides": [
+        "apktool"
+      ],
+      "python": null,
+      "skills": [
+        "detecting-mobile-malware-behavior",
+        "exploiting-deeplink-vulnerabilities",
+        "reverse-engineering-android-malware-with-jadx"
+      ],
+      "status": "auto",
+      "version": "3.0.3",
+      "via": null
+    },
+    "apt": {
+      "alternative": "Homebrew（`brew install`）で代替",
+      "category": "linux",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "invoked",
+      "license": null,
+      "links": [],
+      "method": "none",
+      "note": "Linux 専用（macOS は Homebrew）",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "eradicating-malware-from-infected-systems",
+        "hardening-linux-endpoint-with-cis-benchmark"
+      ],
+      "status": "unsupported",
+      "version": null,
+      "via": null
+    },
+    "apt-get": {
+      "alternative": "Homebrew で代替",
+      "category": "linux",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "invoked",
+      "license": null,
+      "links": [],
+      "method": "none",
+      "note": "Linux 専用",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "configuring-host-based-intrusion-detection",
+        "deploying-osquery-for-endpoint-monitoring"
+      ],
+      "status": "unsupported",
+      "version": null,
+      "via": null
+    },
+    "apt-transport-https": {
+      "alternative": "Homebrew で代替",
+      "category": "linux",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": "none",
+      "note": "Linux 専用",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "scanning-docker-images-with-trivy"
+      ],
+      "status": "unsupported",
+      "version": null,
+      "via": null
+    },
+    "apt-utils": {
+      "alternative": "Homebrew で代替",
+      "category": "linux",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": "none",
+      "note": "Linux 専用",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "building-red-team-c2-infrastructure-with-havoc"
+      ],
+      "status": "unsupported",
+      "version": null,
+      "via": null
+    },
+    "arcjet": {
+      "alternative": null,
+      "category": "cloud_ab",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": "SEE LICENSE IN LICENSE",
+      "links": [],
+      "method": "npm",
+      "note": "Arcjet アカウント/API キーが必要",
+      "package": "@arcjet/cli",
+      "packageVerified": true,
+      "provides": [
+        "arcjet"
+      ],
+      "python": null,
+      "skills": [
+        "arcjet"
+      ],
+      "status": "manual",
+      "version": "1.2.0",
+      "via": null
+    },
+    "arpwatch": {
+      "alternative": null,
+      "category": "net",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": "none",
+      "note": "brew 未提供。Linux 前提の L2 監視ツール",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "detecting-arp-poisoning-in-network-traffic"
+      ],
+      "status": "manual",
+      "version": null,
+      "via": null
+    },
+    "atomic-operator": {
+      "alternative": null,
+      "category": "dfir",
+      "check": [
+        "atomic-operator"
+      ],
+      "defaultApply": true,
+      "evidence": "declared",
+      "license": "MIT",
+      "links": [],
+      "method": "pipx",
+      "note": null,
+      "package": "atomic-operator",
+      "packageVerified": true,
+      "provides": [
+        "atomic-operator"
+      ],
+      "python": null,
+      "skills": [
+        "performing-threat-emulation-with-atomic-red-team"
+      ],
+      "status": "auto",
+      "version": "0.9.0",
+      "via": null
+    },
+    "audispd-plugins": {
+      "alternative": "macOS に auditd 相当が無いため、`log stream` + EDR で代替",
+      "category": "linux",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": "none",
+      "note": "Linux auditd 専用",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "hardening-linux-endpoint-with-cis-benchmark"
+      ],
+      "status": "unsupported",
+      "version": null,
+      "via": null
+    },
+    "ausearch": {
+      "alternative": "macOS は unified log。`log show --predicate ... --last 1h` で代替（auditd 相当は無い）",
+      "category": "linux",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "invoked",
+      "license": null,
+      "links": [],
+      "method": "none",
+      "note": "Linux auditd 専用",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "analyzing-linux-audit-logs-for-intrusion",
+        "analyzing-linux-system-artifacts",
+        "analyzing-persistence-mechanisms-in-linux",
+        "detecting-container-escape-attempts",
+        "performing-linux-log-forensics-investigation",
+        "performing-log-analysis-for-forensic-investigation"
+      ],
+      "status": "unsupported",
+      "version": null,
+      "via": null
+    },
+    "autoconf": {
+      "alternative": "`brew install autoconf`（必要な場合のみ個別導入）",
+      "category": "linux",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": "none",
+      "note": "Linux のビルド依存（macOS は Xcode CLT または brew autoconf を個別導入）",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "configuring-suricata-for-network-monitoring"
+      ],
+      "status": "unsupported",
+      "version": null,
+      "via": null
+    },
+    "automake": {
+      "alternative": "`brew install automake`（必要な場合のみ個別導入）",
+      "category": "linux",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": "none",
+      "note": "Linux のビルド依存",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "configuring-suricata-for-network-monitoring"
+      ],
+      "status": "unsupported",
+      "version": null,
+      "via": null
+    },
+    "autopsy": {
+      "alternative": null,
+      "category": "dfir",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": "none",
+      "note": "GUI＋巨大（JRE 同梱）。Sleuth Kit CLI（導入済み）で代替可",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "analyzing-disk-image-with-autopsy"
+      ],
+      "status": "manual",
+      "version": null,
+      "via": null
+    },
+    "aws-nitro-enclaves-cli-devel": {
+      "alternative": "Nitro Enclaves は EC2(Nitro) 前提。Linux インスタンスで実施",
+      "category": "linux",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": "none",
+      "note": "Linux 専用（nitro-cli）",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "implementing-aws-nitro-enclave-security"
+      ],
+      "status": "unsupported",
+      "version": null,
+      "via": null
+    },
+    "azure-identity": {
+      "alternative": null,
+      "category": "pylib",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "言語パッケージ（スキル内で venv/pip 導入する想定。今回の対象外）",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "detecting-azure-storage-account-misconfigurations"
+      ],
+      "status": "out_of_scope",
+      "version": null,
+      "via": null
+    },
+    "azure-mgmt-storage": {
+      "alternative": null,
+      "category": "pylib",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "言語パッケージ（スキル内で venv/pip 導入する想定。今回の対象外）",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "detecting-azure-storage-account-misconfigurations"
+      ],
+      "status": "out_of_scope",
+      "version": null,
+      "via": null
+    },
+    "bandit": {
+      "alternative": null,
+      "category": "devsec",
+      "check": [
+        "bandit"
+      ],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": "Apache-2.0",
+      "links": [],
+      "method": "pipx",
+      "note": null,
+      "package": "bandit",
+      "packageVerified": true,
+      "provides": [
+        "bandit"
+      ],
+      "python": null,
+      "skills": [
+        "performing-serverless-function-security-review"
+      ],
+      "status": "auto",
+      "version": "1.9.4",
+      "via": null
+    },
+    "bcdedit": {
+      "alternative": "Windows 専用。起動構成は macOS の `bless` / `nvram -p` が相当（直接代替は不可）",
+      "category": "windows",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "invoked",
+      "license": null,
+      "links": [],
+      "method": "none",
+      "note": "Windows 専用",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "analyzing-bootkit-and-rootkit-samples",
+        "analyzing-uefi-bootkit-persistence"
+      ],
+      "status": "unsupported",
+      "version": null,
+      "via": null
+    },
+    "bgpalerter": {
+      "alternative": null,
+      "category": "net",
+      "check": [
+        "bgpalerter"
+      ],
+      "defaultApply": true,
+      "evidence": "declared",
+      "license": "BSD-3-Clause",
+      "links": [],
+      "method": "npm",
+      "note": null,
+      "package": "bgpalerter",
+      "packageVerified": true,
+      "provides": [
+        "bgpalerter"
+      ],
+      "python": null,
+      "skills": [
+        "exploiting-bgp-hijacking-vulnerabilities"
+      ],
+      "status": "auto",
+      "version": "1.32.0",
+      "via": null
+    },
+    "bigframes": {
+      "alternative": null,
+      "category": "pylib",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "言語パッケージ（スキル内で venv/pip 導入する想定。今回の対象外）",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "bigquery-basics"
+      ],
+      "status": "out_of_scope",
+      "version": null,
+      "via": null
+    },
+    "boto3": {
+      "alternative": null,
+      "category": "pylib",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "言語パッケージ（スキル内で venv/pip 導入する想定。今回の対象外）",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "implementing-aws-nitro-enclave-security",
+        "implementing-ransomware-backup-strategy",
+        "performing-aws-account-enumeration-with-scout-suite",
+        "performing-cloud-incident-containment-procedures",
+        "performing-cloud-log-forensics-with-athena",
+        "performing-cloud-native-threat-hunting-with-aws-detective",
+        "performing-cloud-storage-forensic-acquisition",
+        "securing-api-gateway-with-aws-waf",
+        "securing-aws-iam-permissions",
+        "securing-serverless-functions"
+      ],
+      "status": "out_of_scope",
+      "version": null,
+      "via": null
+    },
+    "boundary": {
+      "alternative": null,
+      "category": "cloud_ab",
+      "check": [
+        "boundary"
+      ],
+      "defaultApply": true,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": "brew",
+      "note": "HashiCorp 公式 tap（brew search で確認）",
+      "package": "hashicorp/tap/boundary",
+      "packageVerified": null,
+      "provides": [
+        "boundary"
+      ],
+      "python": null,
+      "skills": [
+        "implementing-zero-trust-with-hashicorp-boundary"
+      ],
+      "status": "auto",
+      "version": null,
+      "via": null
+    },
+    "build-essential": {
+      "alternative": "`xcode-select --install`（Xcode CLT）で代替",
+      "category": "linux",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": "none",
+      "note": "Linux のメタパッケージ（macOS は Xcode CLT）",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "building-red-team-c2-infrastructure-with-havoc",
+        "configuring-snort-ids-for-intrusion-detection",
+        "configuring-suricata-for-network-monitoring"
+      ],
+      "status": "unsupported",
+      "version": null,
+      "via": null
+    },
+    "c2": {
+      "alternative": null,
+      "category": "noise",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "invoked",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "ツール名ではない（prose）",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "analyzing-command-and-control-communication",
+        "analyzing-linux-elf-malware",
+        "extracting-iocs-from-malware-samples",
+        "reverse-engineering-malware-with-ghidra"
+      ],
+      "status": "noise",
+      "version": null,
+      "via": null
+    },
+    "calicoctl": {
+      "alternative": null,
+      "category": "cloud_ab",
+      "check": [
+        "calicoctl"
+      ],
+      "defaultApply": true,
+      "evidence": "invoked",
+      "license": "Apache-2.0",
+      "links": [],
+      "method": "brew",
+      "note": null,
+      "package": "calicoctl",
+      "packageVerified": true,
+      "provides": [
+        "calicoctl"
+      ],
+      "python": null,
+      "skills": [
+        "implementing-container-network-policies-with-calico",
+        "implementing-kubernetes-network-policy-with-calico"
+      ],
+      "status": "auto",
+      "version": "3.33.0",
+      "via": null
+    },
+    "capinfos": {
+      "alternative": null,
+      "category": "net",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "invoked",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "wireshark formula が提供",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "analyzing-network-traffic-of-malware",
+        "performing-network-forensics-with-wireshark"
+      ],
+      "status": "alias",
+      "version": null,
+      "via": "tshark"
+    },
+    "cartography": {
+      "alternative": null,
+      "category": "cloud_ab",
+      "check": [
+        "cartography"
+      ],
+      "defaultApply": true,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": "pipx",
+      "note": null,
+      "package": "cartography",
+      "packageVerified": true,
+      "provides": [
+        "cartography"
+      ],
+      "python": null,
+      "skills": [
+        "performing-cloud-asset-inventory-with-cartography"
+      ],
+      "status": "auto",
+      "version": "0.143.0",
+      "via": null
+    },
+    "cbor2": {
+      "alternative": null,
+      "category": "pylib",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "言語パッケージ（スキル内で venv/pip 導入する想定。今回の対象外）",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "implementing-aws-nitro-enclave-security"
+      ],
+      "status": "out_of_scope",
+      "version": null,
+      "via": null
+    },
+    "chkrootkit": {
+      "alternative": null,
+      "category": "dfir",
+      "check": [
+        "chkrootkit"
+      ],
+      "defaultApply": true,
+      "evidence": "invoked",
+      "license": "GPL-2.0-or-later",
+      "links": [],
+      "method": "brew",
+      "note": null,
+      "package": "chkrootkit",
+      "packageVerified": true,
+      "provides": [
+        "chkrootkit"
+      ],
+      "python": null,
+      "skills": [
+        "analyzing-linux-system-artifacts",
+        "detecting-rootkit-activity"
+      ],
+      "status": "auto",
+      "version": "0.59",
+      "via": null
+    },
+    "chrony": {
+      "alternative": "macOS は `sntp` / `systemsetup -getusingnetworktime`（時間同期の確認のみ）",
+      "category": "linux",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": "none",
+      "note": "Linux 専用",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "hardening-linux-endpoint-with-cis-benchmark"
+      ],
+      "status": "unsupported",
+      "version": null,
+      "via": null
+    },
+    "clamscan": {
+      "alternative": null,
+      "category": "dfir",
+      "check": [
+        "clamscan",
+        "freshclam"
+      ],
+      "defaultApply": true,
+      "evidence": "invoked",
+      "license": "GPL-2.0-or-later",
+      "links": [],
+      "method": "brew",
+      "note": null,
+      "package": "clamav",
+      "packageVerified": true,
+      "provides": [
+        "clamscan",
+        "freshclam"
+      ],
+      "python": null,
+      "skills": [
+        "eradicating-malware-from-infected-systems",
+        "recovering-from-ransomware-attack"
+      ],
+      "status": "auto",
+      "version": "1.5.4",
+      "via": null
+    },
+    "cloud-sql-python-connector": {
+      "alternative": null,
+      "category": "pylib",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "言語パッケージ（スキル内で venv/pip 導入する想定。今回の対象外）",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "cloud-sql-basics"
+      ],
+      "status": "out_of_scope",
+      "version": null,
+      "via": null
+    },
+    "cloudsplaining": {
+      "alternative": null,
+      "category": "cloud_ab",
+      "check": [
+        "cloudsplaining"
+      ],
+      "defaultApply": true,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": "pipx",
+      "note": null,
+      "package": "cloudsplaining",
+      "packageVerified": true,
+      "provides": [
+        "cloudsplaining"
+      ],
+      "python": null,
+      "skills": [
+        "detecting-aws-iam-privilege-escalation"
+      ],
+      "status": "auto",
+      "version": "0.9.1",
+      "via": null
+    },
+    "compliant": {
+      "alternative": null,
+      "category": "noise",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "invoked",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "prose",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "implementing-azure-defender-for-cloud",
+        "implementing-beyondcorp-zero-trust-access-model"
+      ],
+      "status": "noise",
+      "version": null,
+      "via": null
+    },
+    "conftest": {
+      "alternative": null,
+      "category": "cloud_ab",
+      "check": [
+        "conftest"
+      ],
+      "defaultApply": true,
+      "evidence": "declared",
+      "license": "Apache-2.0",
+      "links": [],
+      "method": "brew",
+      "note": null,
+      "package": "conftest",
+      "packageVerified": true,
+      "provides": [
+        "conftest"
+      ],
+      "python": null,
+      "skills": [
+        "implementing-policy-as-code-with-open-policy-agent"
+      ],
+      "status": "auto",
+      "version": "0.71.1",
+      "via": null
+    },
+    "cpu": {
+      "alternative": null,
+      "category": "noise",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "ツール名ではない（prose）",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "detecting-ai-model-prompt-injection-attacks"
+      ],
+      "status": "noise",
+      "version": null,
+      "via": null
+    },
+    "crackmapexec": {
+      "alternative": null,
+      "category": "cloud_ab",
+      "check": [
+        "nxc"
+      ],
+      "defaultApply": false,
+      "evidence": "invoked",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "後継 netexec (`nxc`) が導入済み",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "exploiting-kerberoasting-with-impacket",
+        "exploiting-ms17-010-eternalblue-vulnerability",
+        "exploiting-nopac-cve-2021-42278-42287",
+        "exploiting-smb-vulnerabilities-with-metasploit",
+        "exploiting-zerologon-vulnerability-cve-2020-1472",
+        "performing-credential-access-with-lazagne",
+        "performing-kerberoasting-attack",
+        "performing-lateral-movement-with-wmiexec"
+      ],
+      "status": "alias",
+      "version": null,
+      "via": null
+    },
+    "cryptography": {
+      "alternative": null,
+      "category": "pylib",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "言語パッケージ（スキル内で venv/pip 導入する想定。今回の対象外）",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "implementing-aws-nitro-enclave-security",
+        "implementing-rsa-key-pair-management",
+        "performing-cryptographic-audit-of-application"
+      ],
+      "status": "out_of_scope",
+      "version": null,
+      "via": null
+    },
+    "dcfldd": {
+      "alternative": null,
+      "category": "dfir",
+      "check": [
+        "dcfldd"
+      ],
+      "defaultApply": true,
+      "evidence": "declared",
+      "license": "GPL-2.0-or-later",
+      "links": [],
+      "method": "brew",
+      "note": null,
+      "package": "dcfldd",
+      "packageVerified": true,
+      "provides": [
+        "dcfldd"
+      ],
+      "python": null,
+      "skills": [
+        "acquiring-disk-image-with-dd-and-dcfldd"
+      ],
+      "status": "auto",
+      "version": "1.9.3",
+      "via": null
+    },
+    "defusedxml": {
+      "alternative": null,
+      "category": "pylib",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "言語パッケージ（スキル内で venv/pip 導入する想定。今回の対象外）",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "testing-for-xxe-injection-vulnerabilities"
+      ],
+      "status": "out_of_scope",
+      "version": null,
+      "via": null
+    },
+    "diec": {
+      "alternative": null,
+      "category": "mobile_re",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "invoked",
+      "license": null,
+      "links": [],
+      "method": "none",
+      "note": "brew 未提供。GitHub リリース（GUI 主体）",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "analyzing-packed-malware-with-upx-unpacker",
+        "performing-static-malware-analysis-with-pe-studio",
+        "reverse-engineering-dotnet-malware-with-dnspy"
+      ],
+      "status": "manual",
+      "version": null,
+      "via": null
+    },
+    "dissect.cobaltstrike": {
+      "alternative": null,
+      "category": "dfir",
+      "check": [
+        "beacon-dump"
+      ],
+      "defaultApply": true,
+      "evidence": "declared",
+      "license": "MIT License",
+      "links": [],
+      "method": "pipx",
+      "note": null,
+      "package": "dissect.cobaltstrike",
+      "packageVerified": true,
+      "provides": [
+        "dissect-cobaltstrike"
+      ],
+      "python": null,
+      "skills": [
+        "analyzing-cobaltstrike-malleable-c2-profiles"
+      ],
+      "status": "auto",
+      "version": "1.3.0",
+      "via": null
+    },
+    "dnspython": {
+      "alternative": null,
+      "category": "pylib",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "言語パッケージ（スキル内で venv/pip 導入する想定。今回の対象外）",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "performing-brand-monitoring-for-impersonation",
+        "performing-external-network-penetration-test",
+        "performing-open-source-intelligence-gathering"
+      ],
+      "status": "out_of_scope",
+      "version": null,
+      "via": null
+    },
+    "dredd": {
+      "alternative": null,
+      "category": "devsec",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": "MIT",
+      "links": [],
+      "method": "npm",
+      "note": "メンテナンス停滞",
+      "package": "dredd",
+      "packageVerified": true,
+      "provides": [
+        "dredd"
+      ],
+      "python": null,
+      "skills": [
+        "implementing-api-schema-validation-security"
+      ],
+      "status": "manual",
+      "version": "14.1.0",
+      "via": null
+    },
+    "eslint": {
+      "alternative": null,
+      "category": "devsec",
+      "check": [
+        "eslint"
+      ],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": "MIT",
+      "links": [],
+      "method": "npm",
+      "note": null,
+      "package": "eslint",
+      "packageVerified": true,
+      "provides": [
+        "eslint"
+      ],
+      "python": null,
+      "skills": [
+        "performing-serverless-function-security-review"
+      ],
+      "status": "auto",
+      "version": "10.12.0",
+      "via": null
+    },
+    "evtx": {
+      "alternative": null,
+      "category": "dfir",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "python-evtx が提供",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "extracting-windows-event-logs-artifacts"
+      ],
+      "status": "alias",
+      "version": null,
+      "via": "python-evtx"
+    },
+    "fail2ban": {
+      "alternative": "macOS は pf + `sshguard`（brew）で代替",
+      "category": "linux",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": "none",
+      "note": "Linux 専用（pf 連携は手作業）",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "detecting-port-scanning-with-fail2ban"
+      ],
+      "status": "unsupported",
+      "version": null,
+      "via": null
+    },
+    "falco": {
+      "alternative": "eBPF/カーネルモジュール前提。Linux コンテナ（`docker run --privileged falcosecurity/falco`）で実施",
+      "category": "linux",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": "none",
+      "note": "eBPF/カーネルモジュール前提。Linux コンテナで実施",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "detecting-container-escape-with-falco-rules"
+      ],
+      "status": "unsupported",
+      "version": null,
+      "via": null
+    },
+    "falcon-sensor-7.18.0-17106.el8.x86_64.rpm": {
+      "alternative": null,
+      "category": "cloud_ab",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": "none",
+      "note": "CrowdStrike 契約が必要",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "deploying-edr-agent-with-crowdstrike"
+      ],
+      "status": "manual",
+      "version": null,
+      "via": null
+    },
+    "flashrom": {
+      "alternative": null,
+      "category": "dfir",
+      "check": [
+        "flashrom"
+      ],
+      "defaultApply": true,
+      "evidence": "invoked",
+      "license": "GPL-2.0-or-later",
+      "links": [],
+      "method": "brew",
+      "note": "ファームウェア読み出し",
+      "package": "flashrom",
+      "packageVerified": true,
+      "provides": [
+        "flashrom"
+      ],
+      "python": null,
+      "skills": [
+        "analyzing-bootkit-and-rootkit-samples",
+        "analyzing-uefi-bootkit-persistence"
+      ],
+      "status": "auto",
+      "version": "1.8.0",
+      "via": null
+    },
+    "freeradius": {
+      "alternative": null,
+      "category": "cloud_ab",
+      "check": [
+        "radiusd",
+        "radtest"
+      ],
+      "defaultApply": true,
+      "evidence": "declared",
+      "license": "GPL-2.0-or-later AND LGPL-2.1-or-later",
+      "links": [],
+      "method": "brew",
+      "note": "formula 名は freeradius-server",
+      "package": "freeradius-server",
+      "packageVerified": true,
+      "provides": [
+        "radiusd",
+        "radtest"
+      ],
+      "python": null,
+      "skills": [
+        "implementing-network-access-control"
+      ],
+      "status": "auto",
+      "version": "3.2.10",
+      "via": null
+    },
+    "freeradius-ldap": {
+      "alternative": null,
+      "category": "cloud_ab",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "freeradius formula に同梱",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "implementing-network-access-control"
+      ],
+      "status": "alias",
+      "version": null,
+      "via": "freeradius"
+    },
+    "freeradius-utils": {
+      "alternative": null,
+      "category": "cloud_ab",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "freeradius formula に同梱",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "implementing-network-access-control"
+      ],
+      "status": "alias",
+      "version": null,
+      "via": "freeradius"
+    },
+    "frida": {
+      "alternative": null,
+      "category": "mobile_re",
+      "check": [
+        "frida",
+        "frida-ps",
+        "frida-trace"
+      ],
+      "defaultApply": true,
+      "evidence": "declared",
+      "license": "wxWindows Library Licence, Version 3.1",
+      "links": [],
+      "method": "pipx",
+      "note": null,
+      "package": "frida-tools",
+      "packageVerified": true,
+      "provides": [
+        "frida",
+        "frida-ps",
+        "frida-trace"
+      ],
+      "python": null,
+      "skills": [
+        "performing-dynamic-analysis-of-android-app"
+      ],
+      "status": "auto",
+      "version": "14.11.0",
+      "via": null
+    },
+    "frida-ios-dump": {
+      "alternative": null,
+      "category": "mobile_re",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": "none",
+      "note": "PyPI 未登録。GitHub ソース＋脱獄端末が必要",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "reverse-engineering-ios-app-with-frida"
+      ],
+      "status": "manual",
+      "version": null,
+      "via": null
+    },
+    "frida-ps": {
+      "alternative": null,
+      "category": "mobile_re",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "invoked",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "frida-tools が提供",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "analyzing-ios-app-security-with-objection",
+        "performing-dynamic-analysis-of-android-app",
+        "performing-ios-app-security-assessment"
+      ],
+      "status": "alias",
+      "version": null,
+      "via": "frida"
+    },
+    "frida-tools": {
+      "alternative": null,
+      "category": "mobile_re",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "同エントリに統合",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "performing-dynamic-analysis-of-android-app",
+        "performing-mobile-app-certificate-pinning-bypass"
+      ],
+      "status": "alias",
+      "version": null,
+      "via": "frida"
+    },
+    "frida-trace": {
+      "alternative": null,
+      "category": "mobile_re",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "invoked",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "frida-tools が提供",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "performing-mobile-app-certificate-pinning-bypass",
+        "reverse-engineering-ios-app-with-frida"
+      ],
+      "status": "alias",
+      "version": null,
+      "via": "frida"
+    },
+    "functions": {
+      "alternative": null,
+      "category": "noise",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "invoked",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "prose（Azure Functions）",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "performing-serverless-function-security-review",
+        "securing-aws-lambda-execution-roles"
+      ],
+      "status": "noise",
+      "version": null,
+      "via": null
+    },
+    "gcc-multilib": {
+      "alternative": "macOS 非対応。32bit バイナリ解析は Linux コンテナで実施",
+      "category": "linux",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": "none",
+      "note": "Linux 専用",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "performing-binary-exploitation-analysis"
+      ],
+      "status": "unsupported",
+      "version": null,
+      "via": null
+    },
+    "gdb": {
+      "alternative": "macOS は標準の `lldb`（`lldb ./binary`）で代替",
+      "category": "mobile_re",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": "none",
+      "note": "macOS は標準の lldb で代替",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "performing-binary-exploitation-analysis"
+      ],
+      "status": "unsupported",
+      "version": null,
+      "via": null
+    },
+    "get-nettcpconnection": {
+      "alternative": "Windows 専用。macOS は `lsof -nP -iTCP -sTCP:ESTABLISHED` で代替",
+      "category": "windows",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "invoked",
+      "license": null,
+      "links": [],
+      "method": "none",
+      "note": "Windows 専用",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "collecting-volatile-evidence-from-compromised-host",
+        "eradicating-malware-from-infected-systems"
+      ],
+      "status": "unsupported",
+      "version": null,
+      "via": null
+    },
+    "get-wmiobject": {
+      "alternative": "Windows 専用。Windows VM で実施",
+      "category": "windows",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "invoked",
+      "license": null,
+      "links": [],
+      "method": "none",
+      "note": "Windows 専用",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "detecting-fileless-attacks-on-endpoints",
+        "detecting-fileless-malware-techniques",
+        "eradicating-malware-from-infected-systems"
+      ],
+      "status": "unsupported",
+      "version": null,
+      "via": null
+    },
+    "gnupg": {
+      "alternative": null,
+      "category": "devsec",
+      "check": [
+        "gpg"
+      ],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "gpg 導入済み",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "scanning-docker-images-with-trivy"
+      ],
+      "status": "alias",
+      "version": null,
+      "via": null
+    },
+    "google-auth": {
+      "alternative": null,
+      "category": "pylib",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "言語パッケージ（スキル内で venv/pip 導入する想定。今回の対象外）",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "agent-platform-inference",
+        "agent-platform-skill-registry"
+      ],
+      "status": "out_of_scope",
+      "version": null,
+      "via": null
+    },
+    "google-cloud-bigquery": {
+      "alternative": null,
+      "category": "pylib",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "言語パッケージ（スキル内で venv/pip 導入する想定。今回の対象外）",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "bigquery-basics"
+      ],
+      "status": "out_of_scope",
+      "version": null,
+      "via": null
+    },
+    "google-cloud-run": {
+      "alternative": null,
+      "category": "pylib",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "言語パッケージ（スキル内で venv/pip 導入する想定。今回の対象外）",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "cloud-run-basics"
+      ],
+      "status": "out_of_scope",
+      "version": null,
+      "via": null
+    },
+    "google-genai": {
+      "alternative": null,
+      "category": "pylib",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "言語パッケージ（スキル内で venv/pip 導入する想定。今回の対象外）",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "agent-platform-inference"
+      ],
+      "status": "out_of_scope",
+      "version": null,
+      "via": null
+    },
+    "gophish": {
+      "alternative": null,
+      "category": "cloud_ab",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": "docker",
+      "note": "brew 未提供。リリースバイナリかコンテナで導入",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "conducting-social-engineering-penetration-test"
+      ],
+      "status": "manual",
+      "version": null,
+      "via": null
+    },
+    "graphql-cop": {
+      "alternative": null,
+      "category": "cloud_ab",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": "none",
+      "note": "PyPI 未登録。GitHub ソースを使用",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "performing-graphql-security-assessment"
+      ],
+      "status": "manual",
+      "version": null,
+      "via": null
+    },
+    "grpcio": {
+      "alternative": null,
+      "category": "pylib",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "言語パッケージ（スキル内で venv/pip 導入する想定。今回の対象外）",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "implementing-velociraptor-for-ir-collection"
+      ],
+      "status": "out_of_scope",
+      "version": null,
+      "via": null
+    },
+    "guardrails-ai": {
+      "alternative": null,
+      "category": "pylib",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "言語パッケージ（スキル内で venv/pip 導入する想定。今回の対象外）",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "implementing-llm-guardrails-for-security"
+      ],
+      "status": "out_of_scope",
+      "version": null,
+      "via": null
+    },
+    "gvm": {
+      "alternative": null,
+      "category": "cloud_ab",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": "docker",
+      "note": "Linux/コンテナ前提（greenbone イメージ）",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "performing-authenticated-scan-with-openvas"
+      ],
+      "status": "manual",
+      "version": null,
+      "via": null
+    },
+    "hcxpcapngtool": {
+      "alternative": null,
+      "category": "net",
+      "check": [
+        "hcxpcapngtool"
+      ],
+      "defaultApply": true,
+      "evidence": "invoked",
+      "license": "MIT",
+      "links": [],
+      "method": "brew",
+      "note": null,
+      "package": "hcxtools",
+      "packageVerified": true,
+      "provides": [
+        "hcxhashtool",
+        "hcxpcapngtool"
+      ],
+      "python": null,
+      "skills": [
+        "performing-wifi-password-cracking-with-aircrack",
+        "performing-wireless-network-penetration-test"
+      ],
+      "status": "auto",
+      "version": "7.1.2",
+      "via": null
+    },
+    "hvac": {
+      "alternative": null,
+      "category": "pylib",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "言語パッケージ（スキル内で venv/pip 導入する想定。今回の対象外）",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "implementing-secrets-management-with-vault"
+      ],
+      "status": "out_of_scope",
+      "version": null,
+      "via": null
+    },
+    "iex": {
+      "alternative": null,
+      "category": "windows",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "invoked",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "PowerShell 組み込みエイリアス",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "detecting-fileless-malware-techniques",
+        "implementing-siem-use-cases-for-detection"
+      ],
+      "status": "noise",
+      "version": null,
+      "via": null
+    },
+    "ileapp": {
+      "alternative": null,
+      "category": "dfir",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": "none",
+      "note": "PyPI 未登録。GitHub リリース（iLEAPP）を使用",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "performing-mobile-device-forensics-with-cellebrite"
+      ],
+      "status": "manual",
+      "version": null,
+      "via": null
+    },
+    "impacket": {
+      "alternative": null,
+      "category": "pylib",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "言語パッケージ（スキル内で venv/pip 導入する想定。今回の対象外）",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "performing-kerberoasting-attack",
+        "performing-lateral-movement-with-wmiexec"
+      ],
+      "status": "out_of_scope",
+      "version": null,
+      "via": null
+    },
+    "impacket-getnpusers": {
+      "alternative": null,
+      "category": "cloud_ab",
+      "check": [
+        "impacket-getnpusers"
+      ],
+      "defaultApply": true,
+      "evidence": "invoked",
+      "license": null,
+      "links": [
+        {
+          "fromGlob": "$HOME/.local/bin/GetNPUsers.py",
+          "name": "impacket-getNPUsers",
+          "reason": "同上"
+        }
+      ],
+      "method": null,
+      "note": "pipx impacket 導入済み。CLI 名は legacy のためシムを張る",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "conducting-internal-network-penetration-test",
+        "performing-active-directory-penetration-test"
+      ],
+      "status": "link",
+      "version": null,
+      "via": null
+    },
+    "impacket-getuserspns": {
+      "alternative": null,
+      "category": "cloud_ab",
+      "check": [
+        "impacket-getuserspns"
+      ],
+      "defaultApply": true,
+      "evidence": "invoked",
+      "license": null,
+      "links": [
+        {
+          "fromGlob": "$HOME/.local/bin/GetUserSPNs.py",
+          "name": "impacket-GetUserSPNs",
+          "reason": "pipx impacket は legacy 名のみを公開するため"
+        }
+      ],
+      "method": null,
+      "note": "pipx impacket 導入済み。CLI 名は legacy のためシムを張る",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "conducting-internal-network-penetration-test",
+        "performing-active-directory-penetration-test",
+        "performing-kerberoasting-attack"
+      ],
+      "status": "link",
+      "version": null,
+      "via": null
+    },
+    "impacket-mssqlclient": {
+      "alternative": null,
+      "category": "cloud_ab",
+      "check": [
+        "impacket-mssqlclient"
+      ],
+      "defaultApply": true,
+      "evidence": "invoked",
+      "license": null,
+      "links": [
+        {
+          "fromGlob": "$HOME/.local/bin/mssqlclient.py",
+          "name": "impacket-mssqlclient",
+          "reason": "同上"
+        }
+      ],
+      "method": null,
+      "note": "pipx impacket 導入済み。CLI 名は legacy のためシムを張る",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "conducting-internal-network-penetration-test",
+        "performing-active-directory-penetration-test"
+      ],
+      "status": "link",
+      "version": null,
+      "via": null
+    },
+    "impacket-psexec": {
+      "alternative": null,
+      "category": "cloud_ab",
+      "check": [
+        "impacket-psexec"
+      ],
+      "defaultApply": true,
+      "evidence": "invoked",
+      "license": null,
+      "links": [
+        {
+          "fromGlob": "$HOME/.local/bin/psexec.py",
+          "name": "impacket-psexec",
+          "reason": "同上"
+        }
+      ],
+      "method": null,
+      "note": "pipx impacket 導入済み。CLI 名は legacy のためシムを張る",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "conducting-internal-network-penetration-test",
+        "conducting-pass-the-ticket-attack",
+        "performing-active-directory-penetration-test"
+      ],
+      "status": "link",
+      "version": null,
+      "via": null
+    },
+    "impacket-secretsdump": {
+      "alternative": null,
+      "category": "cloud_ab",
+      "check": [
+        "impacket-secretsdump"
+      ],
+      "defaultApply": true,
+      "evidence": "invoked",
+      "license": null,
+      "links": [
+        {
+          "fromGlob": "$HOME/.local/bin/secretsdump.py",
+          "name": "impacket-secretsdump",
+          "reason": "同上"
+        }
+      ],
+      "method": null,
+      "note": "pipx impacket 導入済み。CLI 名は legacy のためシムを張る",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "conducting-internal-network-penetration-test",
+        "conducting-pass-the-ticket-attack",
+        "performing-active-directory-penetration-test"
+      ],
+      "status": "link",
+      "version": null,
+      "via": null
+    },
+    "impacket-ticketer": {
+      "alternative": null,
+      "category": "cloud_ab",
+      "check": [
+        "impacket-ticketer"
+      ],
+      "defaultApply": true,
+      "evidence": "invoked",
+      "license": null,
+      "links": [
+        {
+          "fromGlob": "$HOME/.local/bin/ticketer.py",
+          "name": "impacket-ticketer",
+          "reason": "同上"
+        }
+      ],
+      "method": null,
+      "note": "pipx impacket 導入済み。CLI 名は legacy のためシムを張る",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "conducting-internal-network-penetration-test",
+        "performing-active-directory-penetration-test"
+      ],
+      "status": "link",
+      "version": null,
+      "via": null
+    },
+    "in-toto": {
+      "alternative": null,
+      "category": "devsec",
+      "check": [
+        "in-toto-run"
+      ],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": "pipx",
+      "note": null,
+      "package": "in-toto",
+      "packageVerified": true,
+      "provides": [
+        "in-toto-run",
+        "in-toto-verify"
+      ],
+      "python": null,
+      "skills": [
+        "implementing-supply-chain-security-with-in-toto"
+      ],
+      "status": "auto",
+      "version": "3.1.0",
+      "via": null
+    },
+    "insmod": {
+      "alternative": "Linux 専用。LiME によるメモリ取得は Linux VM/対象機で実施し、取得済みダンプを macOS で解析する",
+      "category": "linux",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "invoked",
+      "license": null,
+      "links": [],
+      "method": "none",
+      "note": "Linux 専用（LiME 取得等）",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "analyzing-memory-forensics-with-lime-and-volatility",
+        "collecting-volatile-evidence-from-compromised-host"
+      ],
+      "status": "unsupported",
+      "version": null,
+      "via": null
+    },
+    "invoke-atomictest": {
+      "alternative": "Atomic Red Team は Windows 前提。macOS 検証は pwsh + 手動コマンドで代替",
+      "category": "windows",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "invoked",
+      "license": null,
+      "links": [],
+      "method": "none",
+      "note": "Windows/pwsh 前提（Atomic Red Team）",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "implementing-siem-use-cases-for-detection",
+        "implementing-threat-modeling-with-mitre-attack",
+        "performing-false-positive-reduction-in-siem"
+      ],
+      "status": "unsupported",
+      "version": null,
+      "via": null
+    },
+    "ip": {
+      "alternative": "`ifconfig -a` / `netstat -rn` / `route -n get` で代替",
+      "category": "linux",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "invoked",
+      "license": null,
+      "links": [],
+      "method": "none",
+      "note": "Linux 専用（macOS は ifconfig）",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "collecting-volatile-evidence-from-compromised-host",
+        "testing-ransomware-recovery-procedures"
+      ],
+      "status": "unsupported",
+      "version": null,
+      "via": null
+    },
+    "iptables": {
+      "alternative": "macOS は pf。`sudo pfctl -sr` / `pfctl -s nat` で代替",
+      "category": "linux",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "invoked",
+      "license": null,
+      "links": [],
+      "method": "none",
+      "note": "Linux 専用（macOS は pf）",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "building-c2-infrastructure-with-sliver-framework",
+        "collecting-volatile-evidence-from-compromised-host",
+        "containing-active-breach",
+        "detecting-ransomware-precursors-in-network",
+        "implementing-ddos-mitigation-with-cloudflare",
+        "performing-kubernetes-etcd-security-assessment"
+      ],
+      "status": "unsupported",
+      "version": null,
+      "via": null
+    },
+    "iptables-persistent": {
+      "alternative": "pf の設定は `/etc/pf.conf` に記述（永続化は pf 側で行う）",
+      "category": "linux",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": "none",
+      "note": "Linux 専用",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "detecting-port-scanning-with-fail2ban"
+      ],
+      "status": "unsupported",
+      "version": null,
+      "via": null
+    },
+    "jadx": {
+      "alternative": null,
+      "category": "mobile_re",
+      "check": [
+        "jadx"
+      ],
+      "defaultApply": true,
+      "evidence": "invoked",
+      "license": "Apache-2.0",
+      "links": [],
+      "method": "brew",
+      "note": null,
+      "package": "jadx",
+      "packageVerified": true,
+      "provides": [
+        "jadx"
+      ],
+      "python": null,
+      "skills": [
+        "detecting-mobile-malware-behavior",
+        "reverse-engineering-android-malware-with-jadx"
+      ],
+      "status": "auto",
+      "version": "1.5.6",
+      "via": null
+    },
+    "jinja2": {
+      "alternative": null,
+      "category": "pylib",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "言語パッケージ（スキル内で venv/pip 導入する想定。今回の対象外）",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "implementing-pci-dss-compliance-controls"
+      ],
+      "status": "out_of_scope",
+      "version": null,
+      "via": null
+    },
+    "jlecmd.exe": {
+      "alternative": "Windows 専用。JumpList 解析は `plaso` で代替",
+      "category": "windows",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "invoked",
+      "license": null,
+      "links": [],
+      "method": "none",
+      "note": "Windows 専用",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "analyzing-lnk-file-and-jump-list-artifacts",
+        "analyzing-windows-lnk-files-for-artifacts"
+      ],
+      "status": "unsupported",
+      "version": null,
+      "via": null
+    },
+    "kube-bench": {
+      "alternative": null,
+      "category": "cloud_ab",
+      "check": [
+        "kube-bench"
+      ],
+      "defaultApply": true,
+      "evidence": "invoked",
+      "license": "Apache-2.0",
+      "links": [],
+      "method": "brew",
+      "note": null,
+      "package": "kube-bench",
+      "packageVerified": true,
+      "provides": [
+        "kube-bench"
+      ],
+      "python": null,
+      "skills": [
+        "performing-kubernetes-cis-benchmark-with-kube-bench",
+        "performing-kubernetes-penetration-testing"
+      ],
+      "status": "auto",
+      "version": "0.16.0",
+      "via": null
+    },
+    "kube-hunter": {
+      "alternative": null,
+      "category": "cloud_ab",
+      "check": [
+        "kube-hunter"
+      ],
+      "defaultApply": true,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": "pipx",
+      "note": null,
+      "package": "kube-hunter",
+      "packageVerified": true,
+      "provides": [
+        "kube-hunter"
+      ],
+      "python": null,
+      "skills": [
+        "performing-kubernetes-penetration-testing"
+      ],
+      "status": "auto",
+      "version": "0.6.8",
+      "via": null
+    },
+    "kubernetes": {
+      "alternative": null,
+      "category": "pylib",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "言語パッケージ（スキル内で venv/pip 導入する想定。今回の対象外）",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "gke-basics",
+        "implementing-pod-security-admission-controller",
+        "implementing-rbac-hardening-for-kubernetes",
+        "securing-kubernetes-on-cloud"
+      ],
+      "status": "out_of_scope",
+      "version": null,
+      "via": null
+    },
+    "kubesec": {
+      "alternative": null,
+      "category": "cloud_ab",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "invoked",
+      "license": null,
+      "links": [],
+      "method": "go",
+      "note": "brew 未提供。go install かリリースバイナリ",
+      "package": "github.com/controlplaneio/kubesec",
+      "packageVerified": null,
+      "provides": [
+        "kubesec"
+      ],
+      "python": null,
+      "skills": [
+        "scanning-kubernetes-manifests-with-kubesec",
+        "securing-helm-chart-deployments"
+      ],
+      "status": "manual",
+      "version": null,
+      "via": null
+    },
+    "lecmd.exe": {
+      "alternative": "Windows 専用。LNK 解析は `LnkParse3`（auto）/ `plaso` で代替",
+      "category": "windows",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "invoked",
+      "license": null,
+      "links": [],
+      "method": "none",
+      "note": "Windows 専用。macOS は plaso/regipy",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "analyzing-lnk-file-and-jump-list-artifacts",
+        "analyzing-windows-lnk-files-for-artifacts"
+      ],
+      "status": "unsupported",
+      "version": null,
+      "via": null
+    },
+    "libc6-dbg": {
+      "alternative": "macOS 非対応。Linux コンテナで実施",
+      "category": "linux",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": "none",
+      "note": "Linux 専用",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "performing-binary-exploitation-analysis"
+      ],
+      "status": "unsupported",
+      "version": null,
+      "via": null
+    },
+    "libevtx-utils": {
+      "alternative": null,
+      "category": "dfir",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": "none",
+      "note": "brew 未提供。python-evtx / plaso で代替",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "performing-log-analysis-for-forensic-investigation"
+      ],
+      "status": "manual",
+      "version": null,
+      "via": null
+    },
+    "libfontconfig1": {
+      "alternative": "`brew install fontconfig` で代替",
+      "category": "linux",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": "none",
+      "note": "Linux のランタイムパッケージ",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "building-red-team-c2-infrastructure-with-havoc"
+      ],
+      "status": "unsupported",
+      "version": null,
+      "via": null
+    },
+    "libimobiledevice-utils": {
+      "alternative": null,
+      "category": "mobile_re",
+      "check": [
+        "ideviceinfo"
+      ],
+      "defaultApply": true,
+      "evidence": "declared",
+      "license": "LGPL-2.1-or-later",
+      "links": [],
+      "method": "brew",
+      "note": "iOS 端末接続用",
+      "package": "libimobiledevice",
+      "packageVerified": true,
+      "provides": [
+        "idevicebackup2",
+        "ideviceinfo"
+      ],
+      "python": null,
+      "skills": [
+        "performing-mobile-device-forensics-with-cellebrite"
+      ],
+      "status": "auto",
+      "version": "1.4.0",
+      "via": null
+    },
+    "libnet1-dev": {
+      "alternative": "`brew install libnet` で代替",
+      "category": "linux",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": "none",
+      "note": "Linux の開発パッケージ",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "configuring-snort-ids-for-intrusion-detection"
+      ],
+      "status": "unsupported",
+      "version": null,
+      "via": null
+    },
+    "libpcap-dev": {
+      "alternative": "macOS は libpcap を OS 同梱（`/usr/lib/libpcap.dylib`）。開発ヘッダは Xcode CLT",
+      "category": "linux",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": "none",
+      "note": "Linux の開発パッケージ（macOS は libpcap 同梱）",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "configuring-snort-ids-for-intrusion-detection",
+        "implementing-network-deception-with-honeypots"
+      ],
+      "status": "unsupported",
+      "version": null,
+      "via": null
+    },
+    "libpcre2-dev": {
+      "alternative": "`brew install pcre2` で代替",
+      "category": "linux",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": "none",
+      "note": "Linux の開発パッケージ",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "configuring-suricata-for-network-monitoring"
+      ],
+      "status": "unsupported",
+      "version": null,
+      "via": null
+    },
+    "libpcre3-dev": {
+      "alternative": "`brew install pcre2`（pcre3 相当）で代替",
+      "category": "linux",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": "none",
+      "note": "Linux の開発パッケージ",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "configuring-snort-ids-for-intrusion-detection"
+      ],
+      "status": "unsupported",
+      "version": null,
+      "via": null
+    },
+    "libpff-python": {
+      "alternative": null,
+      "category": "pylib",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "言語パッケージ（スキル内で venv/pip 導入する想定。今回の対象外）",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "analyzing-outlook-pst-for-email-forensics"
+      ],
+      "status": "out_of_scope",
+      "version": null,
+      "via": null
+    },
+    "libpq5": {
+      "alternative": "`brew install libpq` で代替",
+      "category": "linux",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": "none",
+      "note": "Linux のランタイムパッケージ",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "performing-container-image-hardening"
+      ],
+      "status": "unsupported",
+      "version": null,
+      "via": null
+    },
+    "libssl-dev": {
+      "alternative": "`brew install openssl@3`（ヘッダ提供）で代替",
+      "category": "linux",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": "none",
+      "note": "Linux の開発パッケージ",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "implementing-network-deception-with-honeypots"
+      ],
+      "status": "unsupported",
+      "version": null,
+      "via": null
+    },
+    "lnkparse3": {
+      "alternative": null,
+      "category": "dfir",
+      "check": [
+        "lnkparse"
+      ],
+      "defaultApply": true,
+      "evidence": "declared",
+      "license": "MIT",
+      "links": [],
+      "method": "pipx",
+      "note": null,
+      "package": "LnkParse3",
+      "packageVerified": true,
+      "provides": [
+        "lnkparse"
+      ],
+      "python": null,
+      "skills": [
+        "analyzing-lnk-file-and-jump-list-artifacts",
+        "analyzing-windows-lnk-files-for-artifacts"
+      ],
+      "status": "auto",
+      "version": "1.6.0",
+      "via": null
+    },
+    "log2timeline.py": {
+      "alternative": null,
+      "category": "dfir",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "invoked",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "plaso が提供",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "analyzing-linux-system-artifacts",
+        "analyzing-prefetch-files-for-execution-history",
+        "building-incident-timeline-with-timesketch"
+      ],
+      "status": "alias",
+      "version": null,
+      "via": "plaso"
+    },
+    "lsb-release": {
+      "alternative": "`sw_vers` で代替",
+      "category": "linux",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": "none",
+      "note": "Linux 専用",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "scanning-docker-images-with-trivy"
+      ],
+      "status": "unsupported",
+      "version": null,
+      "via": null
+    },
+    "mftecmd.exe": {
+      "alternative": "Windows 専用。macOS では `analyzeMFT`（auto）/ `plaso` で MFT を解析",
+      "category": "windows",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "invoked",
+      "license": null,
+      "links": [],
+      "method": "none",
+      "note": "Windows 専用。macOS は analyzeMFT/plaso",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "analyzing-mft-for-deleted-file-recovery",
+        "analyzing-slack-space-and-file-system-artifacts",
+        "hunting-for-defense-evasion-via-timestomping"
+      ],
+      "status": "unsupported",
+      "version": null,
+      "via": null
+    },
+    "mining": {
+      "alternative": null,
+      "category": "noise",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "invoked",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "prose",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "analyzing-linux-elf-malware",
+        "detecting-cryptomining-in-cloud"
+      ],
+      "status": "noise",
+      "version": null,
+      "via": null
+    },
+    "mitreattack-python": {
+      "alternative": null,
+      "category": "pylib",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "言語パッケージ（スキル内で venv/pip 導入する想定。今回の対象外）",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "analyzing-apt-group-with-mitre-navigator",
+        "analyzing-threat-actor-ttps-with-mitre-attack"
+      ],
+      "status": "out_of_scope",
+      "version": null,
+      "via": null
+    },
+    "mono-complete": {
+      "alternative": "`brew install mono`（.NET 系ツールの一部は mono 不要）",
+      "category": "linux",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": "none",
+      "note": "Linux のメタパッケージ",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "performing-network-forensics-with-wireshark"
+      ],
+      "status": "unsupported",
+      "version": null,
+      "via": null
+    },
+    "msfconsole": {
+      "alternative": null,
+      "category": "mobile_re",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "invoked",
+      "license": null,
+      "links": [],
+      "method": "brew-cask",
+      "note": "cask・大容量のため手動",
+      "package": "metasploit",
+      "packageVerified": true,
+      "provides": [
+        "msfconsole",
+        "msfvenom"
+      ],
+      "python": null,
+      "skills": [
+        "exploiting-smb-vulnerabilities-with-metasploit",
+        "exploiting-vulnerabilities-with-metasploit-framework",
+        "performing-external-network-penetration-test",
+        "scanning-network-with-nmap-advanced"
+      ],
+      "status": "manual",
+      "version": "6.5.3,20260826055538",
+      "via": null
+    },
+    "msfvenom": {
+      "alternative": null,
+      "category": "mobile_re",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "invoked",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "metasploit cask が提供",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "conducting-full-scope-red-team-engagement",
+        "exploiting-vulnerabilities-with-metasploit-framework"
+      ],
+      "status": "alias",
+      "version": null,
+      "via": "msfconsole"
+    },
+    "mythril": {
+      "alternative": null,
+      "category": "web3",
+      "check": [
+        "myth"
+      ],
+      "defaultApply": true,
+      "evidence": "declared",
+      "license": "MIT",
+      "links": [],
+      "method": "pipx",
+      "note": "z3 依存で導入は重め",
+      "package": "mythril",
+      "packageVerified": true,
+      "provides": [
+        "myth"
+      ],
+      "python": "/opt/homebrew/bin/python3.13",
+      "skills": [
+        "analyzing-ethereum-smart-contract-vulnerabilities"
+      ],
+      "status": "auto",
+      "version": "0.24.8",
+      "via": null
+    },
+    "nasm": {
+      "alternative": null,
+      "category": "mobile_re",
+      "check": [
+        "nasm"
+      ],
+      "defaultApply": true,
+      "evidence": "declared",
+      "license": "BSD-2-Clause",
+      "links": [],
+      "method": "brew",
+      "note": null,
+      "package": "nasm",
+      "packageVerified": true,
+      "provides": [
+        "nasm"
+      ],
+      "python": null,
+      "skills": [
+        "performing-binary-exploitation-analysis"
+      ],
+      "status": "auto",
+      "version": "3.02",
+      "via": null
+    },
+    "nemoguardrails": {
+      "alternative": null,
+      "category": "pylib",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "言語パッケージ（スキル内で venv/pip 導入する想定。今回の対象外）",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "implementing-llm-guardrails-for-security"
+      ],
+      "status": "out_of_scope",
+      "version": null,
+      "via": null
+    },
+    "neo4j": {
+      "alternative": null,
+      "category": "pylib",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "言語パッケージ（スキル内で venv/pip 導入する想定。今回の対象外）",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "exploiting-active-directory-with-bloodhound",
+        "performing-cloud-asset-inventory-with-cartography"
+      ],
+      "status": "out_of_scope",
+      "version": null,
+      "via": null
+    },
+    "networkminer": {
+      "alternative": null,
+      "category": "net",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "invoked",
+      "license": null,
+      "links": [],
+      "method": "none",
+      "note": "GUI 製品。macOS は Wine 前提のため手動",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "analyzing-network-traffic-for-incidents",
+        "analyzing-network-traffic-of-malware"
+      ],
+      "status": "manual",
+      "version": null,
+      "via": null
+    },
+    "nextdns": {
+      "alternative": null,
+      "category": "cloud_ab",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": "MIT",
+      "links": [],
+      "method": "brew",
+      "note": "NextDNS アカウントと Profile ID が必要",
+      "package": "nextdns",
+      "packageVerified": true,
+      "provides": [
+        "nextdns"
+      ],
+      "python": null,
+      "skills": [
+        "implementing-zero-trust-dns-with-nextdns"
+      ],
+      "status": "manual",
+      "version": "1.47.3",
+      "via": null
+    },
+    "nfdump": {
+      "alternative": null,
+      "category": "net",
+      "check": [
+        "nfdump"
+      ],
+      "defaultApply": true,
+      "evidence": "invoked",
+      "license": "BSD-3-Clause",
+      "links": [],
+      "method": "brew",
+      "note": null,
+      "package": "nfdump",
+      "packageVerified": true,
+      "provides": [
+        "nfdump"
+      ],
+      "python": null,
+      "skills": [
+        "implementing-network-segmentation-with-firewall-zones",
+        "implementing-network-traffic-baselining"
+      ],
+      "status": "auto",
+      "version": "1.7.10",
+      "via": null
+    },
+    "nosqli": {
+      "alternative": null,
+      "category": "cloud_ab",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": "none",
+      "note": "PyPI 未登録。スキル記載の pip 経路と go 経路が不一致のため手動確認",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "exploiting-nosql-injection-vulnerabilities"
+      ],
+      "status": "manual",
+      "version": null,
+      "via": null
+    },
+    "ns": {
+      "alternative": null,
+      "category": "noise",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "invoked",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "XML 名前空間の略記（prose）",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "performing-log-analysis-for-forensic-investigation",
+        "performing-malware-persistence-investigation"
+      ],
+      "status": "noise",
+      "version": null,
+      "via": null
+    },
+    "object": {
+      "alternative": null,
+      "category": "noise",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "invoked",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "prose",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "analyzing-pdf-malware-with-pdfid",
+        "detecting-serverless-function-injection"
+      ],
+      "status": "noise",
+      "version": null,
+      "via": null
+    },
+    "objection": {
+      "alternative": null,
+      "category": "mobile_re",
+      "check": [
+        "objection"
+      ],
+      "defaultApply": true,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": "pipx",
+      "note": null,
+      "package": "objection",
+      "packageVerified": true,
+      "provides": [
+        "objection"
+      ],
+      "python": null,
+      "skills": [
+        "performing-mobile-app-certificate-pinning-bypass"
+      ],
+      "status": "auto",
+      "version": "1.12.5",
+      "via": null
+    },
+    "openai": {
+      "alternative": null,
+      "category": "pylib",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "言語パッケージ（スキル内で venv/pip 導入する想定。今回の対象外）",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "agent-platform-inference"
+      ],
+      "status": "out_of_scope",
+      "version": null,
+      "via": null
+    },
+    "opencanary": {
+      "alternative": null,
+      "category": "cloud_ab",
+      "check": [
+        "opencanaryd"
+      ],
+      "defaultApply": true,
+      "evidence": "declared",
+      "license": "BSD",
+      "links": [],
+      "method": "pipx",
+      "note": null,
+      "package": "opencanary",
+      "packageVerified": true,
+      "provides": [
+        "opencanaryd"
+      ],
+      "python": null,
+      "skills": [
+        "implementing-network-deception-with-honeypots"
+      ],
+      "status": "auto",
+      "version": "0.9.10",
+      "via": null
+    },
+    "openscap-scanner": {
+      "alternative": "`docker run --rm -v $PWD:/scan openscap/openscap` 等のコンテナで代替",
+      "category": "linux",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": "none",
+      "note": "Linux 専用",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "hardening-linux-endpoint-with-cis-benchmark"
+      ],
+      "status": "unsupported",
+      "version": null,
+      "via": null
+    },
+    "opentaxii": {
+      "alternative": null,
+      "category": "pylib",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "言語パッケージ（スキル内で venv/pip 導入する想定。今回の対象外）",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "implementing-taxii-server-with-opentaxii"
+      ],
+      "status": "out_of_scope",
+      "version": null,
+      "via": null
+    },
+    "osquery": {
+      "alternative": null,
+      "category": "dfir",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": "none",
+      "note": "cask は公式 pkg 配布で PATH に CLI を出さない（スキル本文も formula 前提）。手動導入 or コンテナ",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "deploying-osquery-for-endpoint-monitoring"
+      ],
+      "status": "manual",
+      "version": null,
+      "via": null
+    },
+    "packetfence": {
+      "alternative": "Debian 専用。PacketFence VM/コンテナで NAC ラボを構築",
+      "category": "linux",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": "none",
+      "note": "Debian 専用 NAC",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "implementing-network-access-control"
+      ],
+      "status": "unsupported",
+      "version": null,
+      "via": null
+    },
+    "pacu": {
+      "alternative": null,
+      "category": "cloud_ab",
+      "check": [
+        "pacu"
+      ],
+      "defaultApply": true,
+      "evidence": "declared",
+      "license": "BSD-3",
+      "links": [],
+      "method": "pipx",
+      "note": null,
+      "package": "pacu",
+      "packageVerified": true,
+      "provides": [
+        "pacu"
+      ],
+      "python": null,
+      "skills": [
+        "performing-cloud-penetration-testing-with-pacu"
+      ],
+      "status": "auto",
+      "version": "1.7.0",
+      "via": null
+    },
+    "pan-python": {
+      "alternative": null,
+      "category": "pylib",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "言語パッケージ（スキル内で venv/pip 導入する想定。今回の対象外）",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "implementing-next-generation-firewall-with-palo-alto"
+      ],
+      "status": "out_of_scope",
+      "version": null,
+      "via": null
+    },
+    "parliament": {
+      "alternative": null,
+      "category": "pylib",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "言語パッケージ（スキル内で venv/pip 導入する想定。今回の対象外）",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "detecting-aws-iam-privilege-escalation"
+      ],
+      "status": "out_of_scope",
+      "version": null,
+      "via": null
+    },
+    "pcap": {
+      "alternative": null,
+      "category": "noise",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "invoked",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "ファイル拡張子（prose）",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "analyzing-network-traffic-for-incidents",
+        "analyzing-network-traffic-of-malware"
+      ],
+      "status": "noise",
+      "version": null,
+      "via": null
+    },
+    "pdf-parser.py": {
+      "alternative": null,
+      "category": "dfir",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "invoked",
+      "license": null,
+      "links": [],
+      "method": "none",
+      "note": "DidierStevensSuite の単体スクリプト（PyPI 未登録）",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "analyzing-malicious-pdf-with-peepdf",
+        "analyzing-pdf-malware-with-pdfid"
+      ],
+      "status": "manual",
+      "version": null,
+      "via": null
+    },
+    "pdfid.py": {
+      "alternative": null,
+      "category": "dfir",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "invoked",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "DidierStevensSuite の単体スクリプト",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "analyzing-malicious-pdf-with-peepdf",
+        "analyzing-pdf-malware-with-pdfid"
+      ],
+      "status": "alias",
+      "version": null,
+      "via": "pdf-parser.py"
+    },
+    "peepdf": {
+      "alternative": null,
+      "category": "dfir",
+      "check": [
+        "peepdf"
+      ],
+      "defaultApply": true,
+      "evidence": "invoked",
+      "license": null,
+      "links": [],
+      "method": "pipx",
+      "note": "PyPI 名は peepdf-3",
+      "package": "peepdf-3",
+      "packageVerified": true,
+      "provides": [
+        "peepdf"
+      ],
+      "python": null,
+      "skills": [
+        "analyzing-malicious-pdf-with-peepdf",
+        "analyzing-pdf-malware-with-pdfid"
+      ],
+      "status": "auto",
+      "version": "6.0.1",
+      "via": null
+    },
+    "peepdf-3": {
+      "alternative": null,
+      "category": "dfir",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "peepdf と同一",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "analyzing-malicious-pdf-with-peepdf"
+      ],
+      "status": "alias",
+      "version": null,
+      "via": "peepdf"
+    },
+    "pid": {
+      "alternative": null,
+      "category": "noise",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "invoked",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "列名（prose）",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "analyzing-memory-dumps-with-volatility",
+        "detecting-rootkit-activity"
+      ],
+      "status": "noise",
+      "version": null,
+      "via": null
+    },
+    "pillow": {
+      "alternative": null,
+      "category": "pylib",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "言語パッケージ（スキル内で venv/pip 導入する想定。今回の対象外）",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "detecting-qr-code-phishing-with-email-security",
+        "performing-mobile-device-forensics-with-cellebrite"
+      ],
+      "status": "out_of_scope",
+      "version": null,
+      "via": null
+    },
+    "pip-audit": {
+      "alternative": null,
+      "category": "devsec",
+      "check": [
+        "pip-audit"
+      ],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": "pipx",
+      "note": null,
+      "package": "pip-audit",
+      "packageVerified": true,
+      "provides": [
+        "pip-audit"
+      ],
+      "python": null,
+      "skills": [
+        "performing-supply-chain-attack-simulation"
+      ],
+      "status": "auto",
+      "version": "2.10.1",
+      "via": null
+    },
+    "plaso": {
+      "alternative": null,
+      "category": "dfir",
+      "check": [
+        "log2timeline",
+        "psort"
+      ],
+      "defaultApply": true,
+      "evidence": "declared",
+      "license": null,
+      "links": [
+        {
+          "fromGlob": "$HOME/.local/bin/log2timeline",
+          "name": "log2timeline.py",
+          "reason": "plaso は log2timeline/psort を公開し、スキルは .py 付き名を呼ぶため"
+        },
+        {
+          "fromGlob": "$HOME/.local/bin/psort",
+          "name": "psort.py",
+          "reason": "同上"
+        }
+      ],
+      "method": "pipx",
+      "note": "スーパータイムライン。初回導入は大きめ",
+      "package": "plaso",
+      "packageVerified": true,
+      "provides": [
+        "log2timeline.py",
+        "pinfo.py",
+        "psort.py"
+      ],
+      "python": "/opt/homebrew/bin/python3.13",
+      "skills": [
+        "performing-timeline-reconstruction-with-plaso"
+      ],
+      "status": "auto",
+      "version": "20260720",
+      "via": null
+    },
+    "plaso-tools": {
+      "alternative": null,
+      "category": "dfir",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "plaso と同一",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "performing-timeline-reconstruction-with-plaso"
+      ],
+      "status": "alias",
+      "version": null,
+      "via": "plaso"
+    },
+    "powershell": {
+      "alternative": "Windows 前提の手順。macOS は `pwsh`（brew）で一部代替可能",
+      "category": "windows",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "invoked",
+      "license": null,
+      "links": [],
+      "method": "none",
+      "note": "Windows 専用（macOS は pwsh だが手順は Windows 前提）",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "analyzing-powershell-empire-artifacts",
+        "conducting-internal-network-penetration-test",
+        "detecting-fileless-malware-techniques"
+      ],
+      "status": "unsupported",
+      "version": null,
+      "via": null
+    },
+    "pre-commit": {
+      "alternative": null,
+      "category": "devsec",
+      "check": [
+        "pre-commit"
+      ],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": "MIT",
+      "links": [],
+      "method": "pipx",
+      "note": null,
+      "package": "pre-commit",
+      "packageVerified": true,
+      "provides": [
+        "pre-commit"
+      ],
+      "python": null,
+      "skills": [
+        "implementing-devsecops-security-scanning",
+        "implementing-secret-scanning-with-gitleaks"
+      ],
+      "status": "auto",
+      "version": "4.6.2",
+      "via": null
+    },
+    "prefetch": {
+      "alternative": "Windows 専用。Prefetch 解析は Windows VM、または取得済みファイルを `plaso`（auto）で処理",
+      "category": "windows",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": "none",
+      "note": "Windows 前提の Prefetch 解析",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "analyzing-prefetch-files-for-execution-history"
+      ],
+      "status": "unsupported",
+      "version": null,
+      "via": null
+    },
+    "presidio-analyzer": {
+      "alternative": null,
+      "category": "pylib",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "言語パッケージ（スキル内で venv/pip 導入する想定。今回の対象外）",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "implementing-llm-guardrails-for-security"
+      ],
+      "status": "out_of_scope",
+      "version": null,
+      "via": null
+    },
+    "presidio-anonymizer": {
+      "alternative": null,
+      "category": "pylib",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "言語パッケージ（スキル内で venv/pip 導入する想定。今回の対象外）",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "implementing-llm-guardrails-for-security"
+      ],
+      "status": "out_of_scope",
+      "version": null,
+      "via": null
+    },
+    "protobuf": {
+      "alternative": null,
+      "category": "pylib",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "言語パッケージ（スキル内で venv/pip 導入する想定。今回の対象外）",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "detecting-ai-model-prompt-injection-attacks"
+      ],
+      "status": "out_of_scope",
+      "version": null,
+      "via": null
+    },
+    "proxychains": {
+      "alternative": null,
+      "category": "net",
+      "check": [
+        "proxychains4"
+      ],
+      "defaultApply": true,
+      "evidence": "invoked",
+      "license": "GPL-2.0-or-later",
+      "links": [],
+      "method": "brew",
+      "note": "バイナリ名は proxychains4",
+      "package": "proxychains-ng",
+      "packageVerified": true,
+      "provides": [
+        "proxychains4"
+      ],
+      "python": null,
+      "skills": [
+        "conducting-internal-network-penetration-test",
+        "performing-external-network-penetration-test"
+      ],
+      "status": "auto",
+      "version": "4.17",
+      "via": null
+    },
+    "psort.py": {
+      "alternative": null,
+      "category": "dfir",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "invoked",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "plaso が提供",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "analyzing-linux-system-artifacts",
+        "analyzing-prefetch-files-for-execution-history",
+        "performing-endpoint-forensics-investigation"
+      ],
+      "status": "alias",
+      "version": null,
+      "via": "plaso"
+    },
+    "put": {
+      "alternative": null,
+      "category": "noise",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "invoked",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "HTTP メソッド（prose）",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "performing-api-fuzzing-with-restler",
+        "testing-api-for-mass-assignment-vulnerability"
+      ],
+      "status": "noise",
+      "version": null,
+      "via": null
+    },
+    "pwntools": {
+      "alternative": null,
+      "category": "mobile_re",
+      "check": [
+        "pwn"
+      ],
+      "defaultApply": true,
+      "evidence": "declared",
+      "license": "Mostly MIT, some GPL/BSD, see LICENSE-pwntools.txt",
+      "links": [],
+      "method": "pipx",
+      "note": null,
+      "package": "pwntools",
+      "packageVerified": true,
+      "provides": [
+        "checksec",
+        "pwn"
+      ],
+      "python": null,
+      "skills": [
+        "performing-binary-exploitation-analysis"
+      ],
+      "status": "auto",
+      "version": "4.15.0",
+      "via": null
+    },
+    "pybgpstream": {
+      "alternative": null,
+      "category": "pylib",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "言語パッケージ（スキル内で venv/pip 導入する想定。今回の対象外）",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "exploiting-bgp-hijacking-vulnerabilities"
+      ],
+      "status": "out_of_scope",
+      "version": null,
+      "via": null
+    },
+    "pycti": {
+      "alternative": null,
+      "category": "pylib",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "言語パッケージ（スキル内で venv/pip 導入する想定。今回の対象外）",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "building-ioc-enrichment-pipeline-with-opencti"
+      ],
+      "status": "out_of_scope",
+      "version": null,
+      "via": null
+    },
+    "pyhindsight": {
+      "alternative": null,
+      "category": "dfir",
+      "check": [
+        "hindsight.py"
+      ],
+      "defaultApply": true,
+      "evidence": "declared",
+      "license": "Apache-2.0",
+      "links": [
+        {
+          "fromGlob": "$HOME/.local/bin/hindsight.py",
+          "name": "hindsight",
+          "reason": "pipx は hindsight.py 名を公開し、スキルは bare な hindsight も呼ぶため"
+        }
+      ],
+      "method": "pipx",
+      "note": "ブラウザフォレンジック",
+      "package": "pyhindsight",
+      "packageVerified": true,
+      "provides": [
+        "hindsight"
+      ],
+      "python": null,
+      "skills": [
+        "extracting-browser-history-artifacts"
+      ],
+      "status": "auto",
+      "version": "20260600",
+      "via": null
+    },
+    "pyjwt": {
+      "alternative": null,
+      "category": "pylib",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "言語パッケージ（スキル内で venv/pip 導入する想定。今回の対象外）",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "testing-for-json-web-token-vulnerabilities",
+        "testing-jwt-token-security"
+      ],
+      "status": "out_of_scope",
+      "version": null,
+      "via": null
+    },
+    "pymalleablec2": {
+      "alternative": null,
+      "category": "pylib",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "CLI を持たない Python ライブラリ（スキルは import で利用。venv/pip で導入する想定）",
+      "package": null,
+      "packageVerified": null,
+      "python": "/opt/homebrew/bin/python3.13",
+      "skills": [
+        "analyzing-cobaltstrike-malleable-c2-profiles"
+      ],
+      "status": "out_of_scope",
+      "version": null,
+      "via": null
+    },
+    "pymisp": {
+      "alternative": null,
+      "category": "pylib",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "言語パッケージ（スキル内で venv/pip 導入する想定。今回の対象外）",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "building-threat-feed-aggregation-with-misp",
+        "collecting-threat-intelligence-with-misp",
+        "implementing-threat-intelligence-lifecycle-management",
+        "performing-threat-intelligence-sharing-with-misp"
+      ],
+      "status": "out_of_scope",
+      "version": null,
+      "via": null
+    },
+    "pypff": {
+      "alternative": null,
+      "category": "pylib",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "言語パッケージ（スキル内で venv/pip 導入する想定。今回の対象外）",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "analyzing-email-headers-for-phishing-investigation"
+      ],
+      "status": "out_of_scope",
+      "version": null,
+      "via": null
+    },
+    "pypi-scan": {
+      "alternative": null,
+      "category": "pylib",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "言語パッケージ（スキル内で venv/pip 導入する想定。今回の対象外）",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "performing-supply-chain-attack-simulation"
+      ],
+      "status": "out_of_scope",
+      "version": null,
+      "via": null
+    },
+    "pypykatz": {
+      "alternative": null,
+      "category": "dfir",
+      "check": [
+        "pypykatz"
+      ],
+      "defaultApply": true,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": "pipx",
+      "note": null,
+      "package": "pypykatz",
+      "packageVerified": true,
+      "provides": [
+        "pypykatz"
+      ],
+      "python": null,
+      "skills": [
+        "extracting-credentials-from-memory-dump"
+      ],
+      "status": "auto",
+      "version": "0.6.13",
+      "via": null
+    },
+    "pysigma": {
+      "alternative": null,
+      "category": "dfir",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "sigma-cli が依存として導入",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "building-detection-rules-with-sigma"
+      ],
+      "status": "alias",
+      "version": null,
+      "via": "sigma"
+    },
+    "pysigma-validators-sigmahq": {
+      "alternative": null,
+      "category": "dfir",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "sigma-cli のプラグイン",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "building-detection-rules-with-sigma"
+      ],
+      "status": "alias",
+      "version": null,
+      "via": "sigma"
+    },
+    "python-evtx": {
+      "alternative": null,
+      "category": "dfir",
+      "check": [
+        "evtx_dump"
+      ],
+      "defaultApply": true,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": "pipx",
+      "note": null,
+      "package": "python-evtx",
+      "packageVerified": true,
+      "provides": [
+        "evtx_dump.py"
+      ],
+      "python": null,
+      "skills": [
+        "hunting-for-living-off-the-land-binaries",
+        "hunting-for-lolbins-execution-in-endpoint-logs",
+        "hunting-for-persistence-via-wmi-subscriptions",
+        "hunting-for-scheduled-task-persistence",
+        "performing-kerberoasting-attack",
+        "performing-lateral-movement-with-wmiexec",
+        "performing-log-analysis-for-forensic-investigation"
+      ],
+      "status": "auto",
+      "version": "0.8.1",
+      "via": null
+    },
+    "python-gvm": {
+      "alternative": null,
+      "category": "pylib",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "言語パッケージ（スキル内で venv/pip 導入する想定。今回の対象外）",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "implementing-vulnerability-management-with-greenbone"
+      ],
+      "status": "out_of_scope",
+      "version": null,
+      "via": null
+    },
+    "python-levenshtein": {
+      "alternative": null,
+      "category": "pylib",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "言語パッケージ（スキル内で venv/pip 導入する想定。今回の対象外）",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "performing-supply-chain-attack-simulation"
+      ],
+      "status": "out_of_scope",
+      "version": null,
+      "via": null
+    },
+    "python-nmap": {
+      "alternative": null,
+      "category": "pylib",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "言語パッケージ（スキル内で venv/pip 導入する想定。今回の対象外）",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "scanning-network-with-nmap-advanced"
+      ],
+      "status": "out_of_scope",
+      "version": null,
+      "via": null
+    },
+    "python-registry": {
+      "alternative": null,
+      "category": "pylib",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "言語パッケージ（スキル内で venv/pip 導入する想定。今回の対象外）",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "analyzing-windows-registry-for-artifacts"
+      ],
+      "status": "out_of_scope",
+      "version": null,
+      "via": null
+    },
+    "python-whois": {
+      "alternative": null,
+      "category": "pylib",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "言語パッケージ（スキル内で venv/pip 導入する想定。今回の対象外）",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "performing-open-source-intelligence-gathering"
+      ],
+      "status": "out_of_scope",
+      "version": null,
+      "via": null
+    },
+    "python3-dev": {
+      "alternative": "mise/Homebrew の Python ヘッダを使用（`brew install python@3`）",
+      "category": "linux",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": "none",
+      "note": "Linux の開発パッケージ",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "implementing-network-deception-with-honeypots"
+      ],
+      "status": "unsupported",
+      "version": null,
+      "via": null
+    },
+    "python3-pip": {
+      "alternative": "pip は導入済み（`pip3 install`）",
+      "category": "linux",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": "none",
+      "note": "Linux のパッケージ名（pip は導入済み）",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "implementing-network-deception-with-honeypots"
+      ],
+      "status": "unsupported",
+      "version": null,
+      "via": null
+    },
+    "python3-virtualenv": {
+      "alternative": "`uv venv` / `python3 -m venv` で代替",
+      "category": "linux",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": "none",
+      "note": "Linux のパッケージ名（uv/pipx で代替）",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "implementing-network-deception-with-honeypots"
+      ],
+      "status": "unsupported",
+      "version": null,
+      "via": null
+    },
+    "pyusn": {
+      "alternative": null,
+      "category": "pylib",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "言語パッケージ（スキル内で venv/pip 導入する想定。今回の対象外）",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "analyzing-slack-space-and-file-system-artifacts"
+      ],
+      "status": "out_of_scope",
+      "version": null,
+      "via": null
+    },
+    "pyvelociraptor": {
+      "alternative": null,
+      "category": "pylib",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "言語パッケージ（スキル内で venv/pip 導入する想定。今回の対象外）",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "implementing-velociraptor-for-ir-collection"
+      ],
+      "status": "out_of_scope",
+      "version": null,
+      "via": null
+    },
+    "pyyaml": {
+      "alternative": null,
+      "category": "pylib",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "言語パッケージ（スキル内で venv/pip 導入する想定。今回の対象外）",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "implementing-pod-security-admission-controller",
+        "implementing-policy-as-code-with-open-policy-agent",
+        "implementing-rbac-hardening-for-kubernetes",
+        "implementing-velociraptor-for-ir-collection",
+        "performing-initial-access-with-evilginx3"
+      ],
+      "status": "out_of_scope",
+      "version": null,
+      "via": null
+    },
+    "pyzbar": {
+      "alternative": null,
+      "category": "pylib",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "言語パッケージ（今回の対象外）",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "detecting-qr-code-phishing-with-email-security"
+      ],
+      "status": "out_of_scope",
+      "version": null,
+      "via": null
+    },
+    "readelf": {
+      "alternative": "`llvm-readelf`（brew llvm）または `otool -l` で代替",
+      "category": "mobile_re",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "invoked",
+      "license": null,
+      "links": [],
+      "method": "none",
+      "note": "macOS は llvm-readelf / otool で代替",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "analyzing-linux-elf-malware",
+        "implementing-memory-protection-with-dep-aslr",
+        "reverse-engineering-android-malware-with-jadx"
+      ],
+      "status": "unsupported",
+      "version": null,
+      "via": null
+    },
+    "regipy": {
+      "alternative": null,
+      "category": "dfir",
+      "check": [
+        "regipy-dump"
+      ],
+      "defaultApply": true,
+      "evidence": "declared",
+      "license": "MIT",
+      "links": [],
+      "method": "pipx",
+      "note": null,
+      "package": "regipy",
+      "packageVerified": true,
+      "provides": [
+        "regipy-dump"
+      ],
+      "python": null,
+      "skills": [
+        "analyzing-windows-amcache-artifacts",
+        "analyzing-windows-shellbag-artifacts"
+      ],
+      "status": "auto",
+      "version": "6.5.0",
+      "via": null
+    },
+    "requests": {
+      "alternative": null,
+      "category": "pylib",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "言語パッケージ（スキル内で venv/pip 導入する想定。今回の対象外）",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "agent-platform-skill-registry",
+        "implementing-aws-nitro-enclave-security",
+        "implementing-patch-management-workflow",
+        "implementing-pci-dss-compliance-controls",
+        "implementing-policy-as-code-with-open-policy-agent",
+        "implementing-privileged-access-management-with-cyberark",
+        "implementing-proofpoint-email-security-gateway",
+        "implementing-purdue-model-network-segmentation",
+        "implementing-rapid7-insightvm-for-scanning",
+        "implementing-scim-provisioning-with-okta",
+        "implementing-secrets-management-with-vault",
+        "implementing-security-information-sharing-with-stix2",
+        "implementing-soar-playbook-with-palo-alto-xsoar",
+        "implementing-stix-taxii-feed-integration",
+        "implementing-taxii-server-with-opentaxii",
+        "implementing-threat-intelligence-lifecycle-management",
+        "implementing-vulnerability-remediation-sla",
+        "implementing-vulnerability-sla-breach-alerting",
+        "performing-android-app-static-analysis-with-mobsf",
+        "performing-automated-malware-analysis-with-cape",
+        "performing-blind-ssrf-exploitation",
+        "performing-brand-monitoring-for-impersonation",
+        "performing-content-security-policy-bypass",
+        "performing-cve-prioritization-with-kev-catalog",
+        "performing-dark-web-monitoring-for-threats",
+        "performing-graphql-depth-limit-attack",
+        "performing-graphql-introspection-attack",
+        "performing-http-parameter-pollution-attack",
+        "performing-ics-asset-discovery-with-claroty",
+        "performing-ip-reputation-analysis-with-shodan",
+        "performing-jwt-none-algorithm-attack",
+        "performing-malware-hash-enrichment-with-virustotal",
+        "performing-open-source-intelligence-gathering",
+        "performing-ot-vulnerability-assessment-with-claroty",
+        "performing-paste-site-monitoring-for-credentials",
+        "performing-phishing-simulation-with-gophish",
+        "performing-supply-chain-attack-simulation",
+        "testing-api-security-with-owasp-top-10"
+      ],
+      "status": "out_of_scope",
+      "version": null,
+      "via": null
+    },
+    "requirements.txt": {
+      "alternative": null,
+      "category": "pylib",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "言語パッケージ（スキル内で venv/pip 導入する想定。今回の対象外）",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "exploiting-active-directory-with-bloodhound",
+        "performing-aws-account-enumeration-with-scout-suite",
+        "performing-credential-access-with-lazagne",
+        "performing-gcp-penetration-testing-with-gcpbucketbrute",
+        "performing-threat-hunting-with-yara-rules"
+      ],
+      "status": "out_of_scope",
+      "version": null,
+      "via": null
+    },
+    "restic": {
+      "alternative": null,
+      "category": "devsec",
+      "check": [
+        "restic"
+      ],
+      "defaultApply": false,
+      "evidence": "invoked",
+      "license": "BSD-2-Clause",
+      "links": [],
+      "method": "brew",
+      "note": null,
+      "package": "restic",
+      "packageVerified": true,
+      "provides": [
+        "restic"
+      ],
+      "python": null,
+      "skills": [
+        "testing-ransomware-recovery-procedures",
+        "validating-backup-integrity-for-recovery"
+      ],
+      "status": "auto",
+      "version": "0.19.1",
+      "via": null
+    },
+    "rita": {
+      "alternative": null,
+      "category": "net",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "invoked",
+      "license": null,
+      "links": [],
+      "method": "docker",
+      "note": "Zeek+ClickHouse 前提。コンテナ推奨（ghcr.io/activecm/rita）",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "analyzing-ransomware-network-indicators",
+        "detecting-exfiltration-over-dns-with-zeek",
+        "detecting-ransomware-precursors-in-network",
+        "hunting-for-beaconing-with-frequency-analysis",
+        "hunting-for-cobalt-strike-beacons",
+        "hunting-for-command-and-control-beaconing",
+        "hunting-for-dns-tunneling-with-zeek"
+      ],
+      "status": "manual",
+      "version": null,
+      "via": null
+    },
+    "rkhunter": {
+      "alternative": null,
+      "category": "dfir",
+      "check": [
+        "rkhunter"
+      ],
+      "defaultApply": true,
+      "evidence": "invoked",
+      "license": "GPL-2.0-or-later",
+      "links": [],
+      "method": "brew",
+      "note": null,
+      "package": "rkhunter",
+      "packageVerified": true,
+      "provides": [
+        "rkhunter"
+      ],
+      "python": null,
+      "skills": [
+        "analyzing-linux-kernel-rootkits",
+        "analyzing-linux-system-artifacts"
+      ],
+      "status": "auto",
+      "version": "1.4.6",
+      "via": null
+    },
+    "ropgadget": {
+      "alternative": null,
+      "category": "mobile_re",
+      "check": [
+        "ROPgadget"
+      ],
+      "defaultApply": true,
+      "evidence": "declared",
+      "license": "BSD",
+      "links": [],
+      "method": "pipx",
+      "note": null,
+      "package": "ropgadget",
+      "packageVerified": true,
+      "provides": [
+        "ROPgadget"
+      ],
+      "python": null,
+      "skills": [
+        "performing-binary-exploitation-analysis"
+      ],
+      "status": "auto",
+      "version": "7.7",
+      "via": null
+    },
+    "routinator": {
+      "alternative": null,
+      "category": "net",
+      "check": [
+        "routinator"
+      ],
+      "defaultApply": true,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": "cargo",
+      "note": "brew 未提供のため cargo install",
+      "package": "routinator",
+      "packageVerified": null,
+      "provides": [
+        "routinator"
+      ],
+      "python": null,
+      "skills": [
+        "implementing-bgp-security-with-rpki"
+      ],
+      "status": "auto",
+      "version": null,
+      "via": null
+    },
+    "scalpel": {
+      "alternative": null,
+      "category": "dfir",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": "none",
+      "note": "brew 未提供。Linux 前提のファイルカービング",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "performing-file-carving-with-foremost"
+      ],
+      "status": "manual",
+      "version": null,
+      "via": null
+    },
+    "scap-security-guide": {
+      "alternative": "SCAP コンテンツはコンテナ（openscap/openscap）で利用",
+      "category": "linux",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": "none",
+      "note": "Linux 専用",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "hardening-linux-endpoint-with-cis-benchmark"
+      ],
+      "status": "unsupported",
+      "version": null,
+      "via": null
+    },
+    "scapy": {
+      "alternative": null,
+      "category": "pylib",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "言語パッケージ（スキル内で venv/pip 導入する想定。今回の対象外）",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "implementing-purdue-model-network-segmentation",
+        "performing-network-packet-capture-analysis"
+      ],
+      "status": "out_of_scope",
+      "version": null,
+      "via": null
+    },
+    "schtasks": {
+      "alternative": "Windows 専用。macOS は `launchctl list` / `crontab -l` が相当",
+      "category": "windows",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "invoked",
+      "license": null,
+      "links": [],
+      "method": "none",
+      "note": "Windows 専用",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "collecting-volatile-evidence-from-compromised-host",
+        "eradicating-malware-from-infected-systems"
+      ],
+      "status": "unsupported",
+      "version": null,
+      "via": null
+    },
+    "scoutsuite": {
+      "alternative": null,
+      "category": "cloud_ab",
+      "check": [
+        "scout"
+      ],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "pipx scoutsuite の `scout` が導入済み",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "implementing-cloud-vulnerability-posture-management",
+        "performing-aws-account-enumeration-with-scout-suite"
+      ],
+      "status": "alias",
+      "version": null,
+      "via": null
+    },
+    "securesystemslib": {
+      "alternative": null,
+      "category": "pylib",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "言語パッケージ（スキル内で venv/pip 導入する想定。今回の対象外）",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "implementing-supply-chain-security-with-in-toto"
+      ],
+      "status": "out_of_scope",
+      "version": null,
+      "via": null
+    },
+    "sentencepiece": {
+      "alternative": null,
+      "category": "pylib",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "言語パッケージ（スキル内で venv/pip 導入する想定。今回の対象外）",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "detecting-ai-model-prompt-injection-attacks"
+      ],
+      "status": "out_of_scope",
+      "version": null,
+      "via": null
+    },
+    "sharphound.exe": {
+      "alternative": "Windows 専用。AD 収集は `bloodhound-python`（導入済み）で代替",
+      "category": "windows",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "invoked",
+      "license": null,
+      "links": [],
+      "method": "none",
+      "note": "Windows 専用。bloodhound-python 導入済み",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "conducting-internal-reconnaissance-with-bloodhound-ce",
+        "executing-red-team-engagement-planning"
+      ],
+      "status": "unsupported",
+      "version": null,
+      "via": null
+    },
+    "shodan": {
+      "alternative": null,
+      "category": "pylib",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "言語パッケージ（スキル内で venv/pip 導入する想定。今回の対象外）",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "performing-ip-reputation-analysis-with-shodan"
+      ],
+      "status": "out_of_scope",
+      "version": null,
+      "via": null
+    },
+    "sigcheck": {
+      "alternative": "macOS は `codesign -dv --verbose=4` / `spctl -a -vv` で代替",
+      "category": "windows",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "invoked",
+      "license": null,
+      "links": [],
+      "method": "none",
+      "note": "Sysinternals（Windows 専用）",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "analyzing-bootkit-and-rootkit-samples",
+        "analyzing-uefi-bootkit-persistence"
+      ],
+      "status": "unsupported",
+      "version": null,
+      "via": null
+    },
+    "sigma": {
+      "alternative": null,
+      "category": "dfir",
+      "check": [
+        "sigma"
+      ],
+      "defaultApply": true,
+      "evidence": "invoked",
+      "license": "LGPL-2.1-or-later",
+      "links": [],
+      "method": "pipx",
+      "note": null,
+      "package": "sigma-cli",
+      "packageVerified": true,
+      "provides": [
+        "sigma"
+      ],
+      "python": null,
+      "skills": [
+        "building-detection-rules-with-sigma",
+        "detecting-lateral-movement-in-network",
+        "detecting-living-off-the-land-with-lolbas",
+        "implementing-siem-correlation-rules-for-apt"
+      ],
+      "status": "auto",
+      "version": "3.1.0",
+      "via": null
+    },
+    "sigma-cli": {
+      "alternative": null,
+      "category": "dfir",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "sigma と同一",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "detecting-lateral-movement-in-network"
+      ],
+      "status": "alias",
+      "version": null,
+      "via": "sigma"
+    },
+    "sleuthkit": {
+      "alternative": null,
+      "category": "dfir",
+      "check": [
+        "fls",
+        "icat",
+        "mmls"
+      ],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "fls/icat/mmls 等は導入済み",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "analyzing-disk-image-with-autopsy"
+      ],
+      "status": "alias",
+      "version": null,
+      "via": null
+    },
+    "slither-analyzer": {
+      "alternative": null,
+      "category": "web3",
+      "check": [
+        "slither"
+      ],
+      "defaultApply": true,
+      "evidence": "declared",
+      "license": "AGPL-3.0",
+      "links": [],
+      "method": "pipx",
+      "note": null,
+      "package": "slither-analyzer",
+      "packageVerified": true,
+      "provides": [
+        "slither"
+      ],
+      "python": null,
+      "skills": [
+        "analyzing-ethereum-smart-contract-vulnerabilities"
+      ],
+      "status": "auto",
+      "version": "0.11.6",
+      "via": null
+    },
+    "snyk": {
+      "alternative": null,
+      "category": "devsec",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": "Apache-2.0",
+      "links": [],
+      "method": "npm",
+      "note": "アカウント登録が必要",
+      "package": "snyk",
+      "packageVerified": true,
+      "provides": [
+        "snyk"
+      ],
+      "python": null,
+      "skills": [
+        "performing-sca-dependency-scanning-with-snyk"
+      ],
+      "status": "manual",
+      "version": "1.1308.0",
+      "via": null
+    },
+    "spacy": {
+      "alternative": null,
+      "category": "pylib",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "言語パッケージ（スキル内で venv/pip 導入する想定。今回の対象外）",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "implementing-llm-guardrails-for-security"
+      ],
+      "status": "out_of_scope",
+      "version": null,
+      "via": null
+    },
+    "splunk-sdk": {
+      "alternative": null,
+      "category": "pylib",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "言語パッケージ（スキル内で venv/pip 導入する想定。今回の対象外）",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "triaging-security-alerts-in-splunk"
+      ],
+      "status": "out_of_scope",
+      "version": null,
+      "via": null
+    },
+    "ss": {
+      "alternative": "`netstat -anv` / `lsof -nP -iTCP -sTCP:LISTEN` で代替",
+      "category": "linux",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "invoked",
+      "license": null,
+      "links": [],
+      "method": "none",
+      "note": "Linux 専用（macOS は netstat/lsof）",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "analyzing-linux-elf-malware",
+        "collecting-volatile-evidence-from-compromised-host",
+        "containing-active-breach",
+        "performing-kubernetes-etcd-security-assessment",
+        "performing-privilege-escalation-on-linux"
+      ],
+      "status": "unsupported",
+      "version": null,
+      "via": null
+    },
+    "steghide": {
+      "alternative": null,
+      "category": "stego",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": "none",
+      "note": "brew 未提供。ソースビルドかコンテナで導入",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "performing-steganography-detection"
+      ],
+      "status": "manual",
+      "version": null,
+      "via": null
+    },
+    "stegoveritas": {
+      "alternative": null,
+      "category": "stego",
+      "check": [
+        "stegoveritas"
+      ],
+      "defaultApply": true,
+      "evidence": "declared",
+      "license": "MIT",
+      "links": [],
+      "method": "pipx",
+      "note": null,
+      "package": "stegoveritas",
+      "packageVerified": true,
+      "provides": [
+        "stegoveritas"
+      ],
+      "python": null,
+      "skills": [
+        "performing-steganography-detection"
+      ],
+      "status": "auto",
+      "version": "1.11",
+      "via": null
+    },
+    "stegsnow": {
+      "alternative": null,
+      "category": "stego",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": "none",
+      "note": "brew 未提供。ソースビルドかコンテナで導入",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "performing-steganography-detection"
+      ],
+      "status": "manual",
+      "version": null,
+      "via": null
+    },
+    "stix2": {
+      "alternative": null,
+      "category": "pylib",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "言語パッケージ（スキル内で venv/pip 導入する想定。今回の対象外）",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "implementing-security-information-sharing-with-stix2",
+        "implementing-stix-taxii-feed-integration",
+        "implementing-taxii-server-with-opentaxii",
+        "implementing-threat-intelligence-lifecycle-management"
+      ],
+      "status": "out_of_scope",
+      "version": null,
+      "via": null
+    },
+    "suricata": {
+      "alternative": null,
+      "category": "net",
+      "check": [
+        "suricata"
+      ],
+      "defaultApply": true,
+      "evidence": "declared",
+      "license": "GPL-2.0-only",
+      "links": [],
+      "method": "brew",
+      "note": null,
+      "package": "suricata",
+      "packageVerified": true,
+      "provides": [
+        "suricata",
+        "suricata-update",
+        "suricatasc"
+      ],
+      "python": null,
+      "skills": [
+        "configuring-suricata-for-network-monitoring",
+        "implementing-network-intrusion-prevention-with-suricata"
+      ],
+      "status": "auto",
+      "version": "8.0.7",
+      "via": null
+    },
+    "suricata-update": {
+      "alternative": null,
+      "category": "net",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "suricata formula が提供",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "configuring-suricata-for-network-monitoring",
+        "implementing-network-intrusion-prevention-with-suricata"
+      ],
+      "status": "alias",
+      "version": null,
+      "via": "suricata"
+    },
+    "suricatasc": {
+      "alternative": null,
+      "category": "net",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "invoked",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "suricata formula が提供",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "configuring-suricata-for-network-monitoring",
+        "detecting-ransomware-precursors-in-network",
+        "implementing-network-intrusion-prevention-with-suricata"
+      ],
+      "status": "alias",
+      "version": null,
+      "via": "suricata"
+    },
+    "tailscale": {
+      "alternative": null,
+      "category": "cloud_ab",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": "BSD-3-Clause",
+      "links": [],
+      "method": "brew",
+      "note": "テールネットへのログインが必要",
+      "package": "tailscale",
+      "packageVerified": true,
+      "provides": [
+        "tailscale"
+      ],
+      "python": null,
+      "skills": [
+        "deploying-tailscale-for-zero-trust-vpn"
+      ],
+      "status": "manual",
+      "version": "1.104.1",
+      "via": null
+    },
+    "taxii2-client": {
+      "alternative": null,
+      "category": "pylib",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "言語パッケージ（スキル内で venv/pip 導入する想定。今回の対象外）",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "implementing-security-information-sharing-with-stix2",
+        "implementing-stix-taxii-feed-integration",
+        "implementing-taxii-server-with-opentaxii"
+      ],
+      "status": "out_of_scope",
+      "version": null,
+      "via": null
+    },
+    "testdisk": {
+      "alternative": null,
+      "category": "dfir",
+      "check": [
+        "testdisk",
+        "photorec"
+      ],
+      "defaultApply": true,
+      "evidence": "declared",
+      "license": "GPL-2.0-or-later",
+      "links": [],
+      "method": "brew",
+      "note": null,
+      "package": "testdisk",
+      "packageVerified": true,
+      "provides": [
+        "photorec",
+        "testdisk"
+      ],
+      "python": null,
+      "skills": [
+        "recovering-deleted-files-with-photorec"
+      ],
+      "status": "auto",
+      "version": "7.2",
+      "via": null
+    },
+    "tetra": {
+      "alternative": null,
+      "category": "dfir",
+      "check": [
+        "tetra"
+      ],
+      "defaultApply": true,
+      "evidence": "invoked",
+      "license": "Apache-2.0",
+      "links": [],
+      "method": "brew",
+      "note": "Tetragon CLI（desc で確認済み）",
+      "package": "tetra",
+      "packageVerified": true,
+      "provides": [
+        "tetra"
+      ],
+      "python": null,
+      "skills": [
+        "implementing-ebpf-security-monitoring",
+        "implementing-runtime-security-with-tetragon"
+      ],
+      "status": "auto",
+      "version": "1.7.1",
+      "via": null
+    },
+    "theharvester": {
+      "alternative": null,
+      "category": "net",
+      "check": [
+        "theHarvester"
+      ],
+      "defaultApply": true,
+      "evidence": "invoked",
+      "license": null,
+      "links": [],
+      "method": "uv",
+      "note": "PyPI の同名パッケージはプレースホルダ（実行ファイルなし）。GitHub ソースを導入（Python>=3.14 必須）",
+      "package": "git+https://github.com/laramies/theHarvester",
+      "packageVerified": null,
+      "provides": [
+        "theHarvester"
+      ],
+      "python": null,
+      "skills": [
+        "conducting-full-scope-red-team-engagement",
+        "conducting-social-engineering-penetration-test",
+        "conducting-social-engineering-pretext-call",
+        "performing-ai-driven-osint-correlation",
+        "performing-external-network-penetration-test",
+        "performing-open-source-intelligence-gathering"
+      ],
+      "status": "auto",
+      "version": null,
+      "via": null
+    },
+    "torch": {
+      "alternative": null,
+      "category": "pylib",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "言語パッケージ（スキル内で venv/pip 導入する想定。今回の対象外）",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "detecting-ai-model-prompt-injection-attacks"
+      ],
+      "status": "out_of_scope",
+      "version": null,
+      "via": null
+    },
+    "transformers": {
+      "alternative": null,
+      "category": "pylib",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "言語パッケージ（スキル内で venv/pip 導入する想定。今回の対象外）",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "detecting-ai-model-prompt-injection-attacks"
+      ],
+      "status": "out_of_scope",
+      "version": null,
+      "via": null
+    },
+    "tshark": {
+      "alternative": null,
+      "category": "net",
+      "check": [
+        "tshark",
+        "capinfos",
+        "editcap"
+      ],
+      "defaultApply": true,
+      "evidence": "declared",
+      "license": "GPL-2.0-or-later",
+      "links": [],
+      "method": "brew",
+      "note": "CLI のみ（GUI 不要）",
+      "package": "wireshark",
+      "packageVerified": true,
+      "provides": [
+        "capinfos",
+        "dumpcap",
+        "editcap",
+        "tshark"
+      ],
+      "python": null,
+      "skills": [
+        "performing-network-forensics-with-wireshark"
+      ],
+      "status": "auto",
+      "version": "4.6.9",
+      "via": null
+    },
+    "upx": {
+      "alternative": null,
+      "category": "mobile_re",
+      "check": [
+        "upx"
+      ],
+      "defaultApply": true,
+      "evidence": "invoked",
+      "license": "GPL-2.0-or-later",
+      "links": [],
+      "method": "brew",
+      "note": null,
+      "package": "upx",
+      "packageVerified": true,
+      "provides": [
+        "upx"
+      ],
+      "python": null,
+      "skills": [
+        "analyzing-linux-elf-malware",
+        "analyzing-packed-malware-with-upx-unpacker"
+      ],
+      "status": "auto",
+      "version": "5.2.1",
+      "via": null
+    },
+    "url": {
+      "alternative": null,
+      "category": "noise",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "invoked",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "ツール名ではない（prose）",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "analyzing-malicious-url-with-urlscan",
+        "collecting-indicators-of-compromise",
+        "conducting-full-scope-red-team-engagement",
+        "exploiting-type-juggling-vulnerabilities"
+      ],
+      "status": "noise",
+      "version": null,
+      "via": null
+    },
+    "urls": {
+      "alternative": null,
+      "category": "noise",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "invoked",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "ツール名ではない（prose）",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "analyzing-email-headers-for-phishing-investigation",
+        "analyzing-macro-malware-in-office-documents"
+      ],
+      "status": "noise",
+      "version": null,
+      "via": null
+    },
+    "vault": {
+      "alternative": null,
+      "category": "cloud_ab",
+      "check": [
+        "vault"
+      ],
+      "defaultApply": true,
+      "evidence": "invoked",
+      "license": null,
+      "links": [],
+      "method": "brew",
+      "note": "dev モードはアカウント不要。tap 追加が必要",
+      "package": "hashicorp/tap/vault",
+      "packageVerified": null,
+      "provides": [
+        "vault"
+      ],
+      "python": null,
+      "skills": [
+        "implementing-hashicorp-vault-dynamic-secrets",
+        "implementing-secrets-management-with-vault"
+      ],
+      "status": "auto",
+      "version": null,
+      "via": null
+    },
+    "vol3": {
+      "alternative": null,
+      "category": "dfir",
+      "check": [
+        "vol"
+      ],
+      "defaultApply": false,
+      "evidence": "invoked",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "pipx volatility3 の `vol` が導入済み",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "analyzing-bootkit-and-rootkit-samples",
+        "analyzing-malware-behavior-with-cuckoo-sandbox",
+        "analyzing-memory-dumps-with-volatility",
+        "analyzing-memory-forensics-with-lime-and-volatility",
+        "analyzing-ransomware-encryption-mechanisms",
+        "analyzing-uefi-bootkit-persistence",
+        "detecting-fileless-malware-techniques",
+        "detecting-process-injection-techniques",
+        "detecting-rootkit-activity"
+      ],
+      "status": "alias",
+      "version": null,
+      "via": null
+    },
+    "volatility3": {
+      "alternative": null,
+      "category": "dfir",
+      "check": [
+        "vol"
+      ],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "同上",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "analyzing-heap-spray-exploitation",
+        "extracting-credentials-from-memory-dump",
+        "performing-memory-forensics-with-volatility3",
+        "performing-memory-forensics-with-volatility3-plugins"
+      ],
+      "status": "alias",
+      "version": null,
+      "via": null
+    },
+    "vssadmin": {
+      "alternative": "Windows 専用。シャドウコピー相当は APFS スナップショット（`tmutil localsnapshot` / `diskutil apfs listSnapshots`）",
+      "category": "windows",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "invoked",
+      "license": null,
+      "links": [],
+      "method": "none",
+      "note": "Windows 専用",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "detecting-credential-dumping-techniques",
+        "investigating-ransomware-attack-artifacts"
+      ],
+      "status": "unsupported",
+      "version": null,
+      "via": null
+    },
+    "wappalyzer": {
+      "alternative": null,
+      "category": "net",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "invoked",
+      "license": null,
+      "links": [],
+      "method": "npm",
+      "note": "npm 版は保守終了。ブラウザ拡張/代替を検討",
+      "package": "wappalyzer",
+      "packageVerified": true,
+      "provides": [
+        "wappalyzer"
+      ],
+      "python": null,
+      "skills": [
+        "performing-external-network-penetration-test",
+        "performing-open-source-intelligence-gathering"
+      ],
+      "status": "manual",
+      "version": "7.0.3",
+      "via": null
+    },
+    "watchdog": {
+      "alternative": null,
+      "category": "pylib",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "言語パッケージ（スキル内で venv/pip 導入する想定。今回の対象外）",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "deploying-decoy-files-for-ransomware-detection"
+      ],
+      "status": "out_of_scope",
+      "version": null,
+      "via": null
+    },
+    "wazuh-agent": {
+      "alternative": null,
+      "category": "cloud_ab",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": "none",
+      "note": "配布物が Linux/Windows 前提。macOS は手動ビルド",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "configuring-host-based-intrusion-detection"
+      ],
+      "status": "manual",
+      "version": null,
+      "via": null
+    },
+    "whatweb": {
+      "alternative": null,
+      "category": "net",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "invoked",
+      "license": null,
+      "links": [],
+      "method": "none",
+      "note": "brew/gem 未提供。GitHub ソース（Ruby）を使用",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "conducting-full-scope-red-team-engagement",
+        "performing-external-network-penetration-test",
+        "performing-open-source-intelligence-gathering"
+      ],
+      "status": "manual",
+      "version": null,
+      "via": null
+    },
+    "wireshark": {
+      "alternative": null,
+      "category": "net",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "tshark と同じ formula",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "performing-network-forensics-with-wireshark"
+      ],
+      "status": "alias",
+      "version": null,
+      "via": "tshark"
+    },
+    "wmic": {
+      "alternative": "Windows 専用。Windows VM か `impacket-wmiexec`（シム対象）で代替",
+      "category": "windows",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "invoked",
+      "license": null,
+      "links": [],
+      "method": "none",
+      "note": "Windows 専用",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "collecting-volatile-evidence-from-compromised-host",
+        "conducting-internal-network-penetration-test",
+        "detecting-fileless-malware-techniques"
+      ],
+      "status": "unsupported",
+      "version": null,
+      "via": null
+    },
+    "yara-python": {
+      "alternative": null,
+      "category": "pylib",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "言語パッケージ（スキル内で venv/pip 導入する想定。今回の対象外）",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "performing-threat-hunting-with-yara-rules"
+      ],
+      "status": "out_of_scope",
+      "version": null,
+      "via": null
+    },
+    "zeek": {
+      "alternative": null,
+      "category": "net",
+      "check": [
+        "zeek"
+      ],
+      "defaultApply": true,
+      "evidence": "declared",
+      "license": "BSD-3-Clause",
+      "links": [],
+      "method": "brew",
+      "note": "zeek-cut も同梱",
+      "package": "zeek",
+      "packageVerified": true,
+      "provides": [
+        "zeek",
+        "zeek-cut"
+      ],
+      "python": null,
+      "skills": [
+        "detecting-network-anomalies-with-zeek",
+        "performing-network-traffic-analysis-with-zeek"
+      ],
+      "status": "auto",
+      "version": "9.0.0",
+      "via": null
+    },
+    "zeek-cut": {
+      "alternative": null,
+      "category": "net",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "invoked",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "zeek formula が提供",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "analyzing-ransomware-network-indicators",
+        "detecting-lateral-movement-with-zeek"
+      ],
+      "status": "alias",
+      "version": null,
+      "via": "zeek"
+    },
+    "zeek-lts": {
+      "alternative": "macOS は brew の `zeek`（本計画の auto 対象）で代替",
+      "category": "linux",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": "none",
+      "note": "Linux リポジトリのパッケージ名（macOS は brew zeek）",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "performing-network-traffic-analysis-with-zeek"
+      ],
+      "status": "unsupported",
+      "version": null,
+      "via": null
+    },
+    "zpa-connector": {
+      "alternative": null,
+      "category": "cloud_ab",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": "none",
+      "note": "Zscaler 契約・専用アプライアンス",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "configuring-zscaler-private-access-for-ztna"
+      ],
+      "status": "manual",
+      "version": null,
+      "via": null
+    },
+    "zpa-connector-latest.rpm": {
+      "alternative": null,
+      "category": "cloud_ab",
+      "check": [],
+      "defaultApply": false,
+      "evidence": "declared",
+      "license": null,
+      "links": [],
+      "method": null,
+      "note": "zpa-connector と同一",
+      "package": null,
+      "packageVerified": null,
+      "python": null,
+      "skills": [
+        "configuring-zscaler-private-access-for-ztna"
+      ],
+      "status": "alias",
+      "version": null,
+      "via": "zpa-connector"
+    },
+    "zsteg": {
+      "alternative": null,
+      "category": "stego",
+      "check": [
+        "zsteg"
+      ],
+      "defaultApply": true,
+      "evidence": "declared",
+      "license": "MIT",
+      "links": [
+        {
+          "altGlob": "$HOME/.gem/ruby/*/bin/zsteg",
+          "fromGlob": "/opt/homebrew/lib/ruby/gems/*/bin/zsteg",
+          "name": "zsteg",
+          "reason": "gem の EXECUTABLE DIRECTORY は PATH 外のため ~/.local/bin にリンク"
+        }
+      ],
+      "method": "gem",
+      "note": null,
+      "package": "zsteg",
+      "packageVerified": true,
+      "provides": [
+        "zsteg"
+      ],
+      "python": null,
+      "skills": [
+        "performing-steganography-detection"
+      ],
+      "status": "auto",
+      "version": "0.2.14",
+      "via": null
+    }
+  },
+  "generatedFrom": "tools/scan_missing_cli.py (declared + command-shaped invocations)",
+  "version": 1
+}
